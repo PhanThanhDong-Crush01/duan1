@@ -1,5 +1,7 @@
-<div class="row"> 
-    <div class="row frmtitle mb"><h1>DANH SÁCH ĐƠN HÀNG</h1></div>   
+<div class="row">
+    <div class="row frmtitle mb">
+        <h1>DANH SÁCH ĐƠN HÀNG</h1>
+    </div>
     <form action="index.php?act=listbill" method="post">
         <input type="text" name="kyw" placeholder="Nhập mã đơn hàng">
         <input type="submit" name="listok" value="GO">
@@ -18,25 +20,26 @@
                     <th>THAO TÁC</th>
                 </tr>
                 <?php
-                    foreach ($listbill as $bill) {
-                        extract($bill);
-                        $kh=$bill["ten_kh"].'
-                        <br> '.$bill["email"].'
-                        <br> '.$bill["dia_chi"].'
-                        <br> '.$bill["sdt"];
-                        $ttdh=get_ttdh($bill["trang_thai"]);
-                        $countsp=loadall_cart_count($bill["ma_hdct"]);
-                        echo '<tr>
+                foreach ($listbill as $bill) {
+                    extract($bill);
+
+                    $sql = "select * from khach_hang where ma_kh = " . $bill["ma_kh"];
+                    $kh = pdo_query($sql);
+
+                    $khach_hang = '<li>' . $kh[0]["ho_ten"] . '</li> <br> <li>' . $kh[0]["email"] . '</li> <br> <li>' . $bill["dia_chi"] . '</li> <br> <li>' . $bill["sdt"] . '</li>';
+                    $ttdh = get_ttdh($bill["trang_thai"]);
+                    $countsp = loadall_cart_count($bill["ma_hd"]);
+                    echo '<tr>
                                 <td><input type="checkbox" name="" id=""></td>
-                                <td>'.$bill['ma_hdct'].'</td>
-                                <td>'.$kh.'</td>
-                                <td>'.$countsp.'</td>
-                                <td><strong>'.$bill['tong_tien'].'</strong></td>
-                                <td>'.$ttdh.'</td>
-                                <td>'.$bill['ngay_dat'].'</td>
+                                <td>' . $bill['ma_hd'] . '</td>
+                                <td>' . $khach_hang . '</td>
+                                <td>' . $countsp . '</td>
+                                <td><strong>' . $bill['tong_tien'] . '</strong></td>
+                                <td>' . $ttdh . '</td>
+                                <td>' . $bill['ngay_dat'] . '</td>
                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
                             </tr>';
-                    }
+                }
                 ?>
             </table>
         </div>

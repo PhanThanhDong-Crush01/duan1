@@ -1,6 +1,6 @@
 <?php
-    function insert_binhluan($noi_dung,$ma_kh,$idpro,$ngay_bl){
-        $sql="insert into binh_luan(noi_dung,ma_kh,idpro,ngay_bl) values('$noi_dung','$ma_kh','$idpro','$ngay_bl')";
+    function insert_binhluan($noi_dung, $iduser,$idpro,$ngay_bl){
+        $sql="insert into binh_luan(noi_dung,iduser,idpro,ngay_bl) values('$noi_dung','$iduser','$idpro','$ngay_bl')";
         pdo_execute($sql);
     }
     function loadall_binhluan($idpro){
@@ -14,4 +14,3 @@
         $sql="delete from binh_luan where ma_bl=".$ma_bl;
         pdo_query($sql);
     }
-?>
