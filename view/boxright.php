@@ -29,8 +29,7 @@
                 </li>
             </div>
         <?php
-        } else {
-        ?>
+        } else { ?>
             <form action="index.php?act=dangnhap" method="post">
                 <div class="row mb10">
                     Tên đăng nhập <br>

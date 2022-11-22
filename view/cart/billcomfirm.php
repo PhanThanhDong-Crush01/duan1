@@ -1,62 +1,52 @@
-<div class="row">
-    <div class="row mb">
-        <div class="boxtrai mr">
-            <div class="row mb">
-                <div class="boxtitle">CẢM ƠN</div>
-                <div class="row boxcontent" style="text-align: center">
-                    <h2>Cảm ơn quý khách đã đặt hàng!</h2>
+    <div class="hero-wrap hero-bread" style="background-image: url('../view/images/bg_6.jpg');">
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Bill</span></p>
+                    <h1 class="mb-0 bread">Bill</h1>
                 </div>
             </div>
-            <?php
-            if (isset($bill) && (is_array($bill))) {
-                extract($bill);
-            }
-            ?>
-            <div class="row mb">
-                <div class="boxtitle">THÔNG TIN ĐƠN HÀNG</div>
-                <div class="row boxcontent" style="text-align: left">
-                    <li>Mã đơn hàng: <?= $bill['ma_hd'] ?></li>
-                    <li>Ngày đặt hàng: <?= $bill['ngay_dat'] ?></li>
-                    <li>Tổng đơn hàng: <?= $bill['tong_tien'] ?></li>
-                    <li>Phương thức thanh toán: <?= $bill['pttt'] == 0 ? 'Trả tiền khi nhận hàng' : 'Thanh toán online' ?></li>
-                </div>
-            </div>
-            <div class="row mb">
-                <div class="boxtitle">THÔNG TIN ĐẶT HÀNG</div>
-                <div class="row boxcontent billform">
-                    <table>
-                        <tr>
-                            <td>Người đặt hàng</td>
-                            <td><?= $_SESSION["user"]["ho_ten"] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Địa chỉ</td>
-                            <td><?= $bill['dia_chi'] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td><?= $_SESSION["user"]["email"] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Điện thoại</td>
-                            <td><?= $bill['sdt'] ?></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="row mb">
-                <div class="boxtitle">CHI TIẾT GIỎ HÀNG</div>
-                <div class="row boxcontent cart">
-                    <table>
-                        <?php
-                        bill_chi_tiet($billct);
-                        ?>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="boxphai">
-            <?php include "view/boxright.php"; ?>
         </div>
     </div>
-</div>
+    <?php
+    if (isset($bill) && (is_array($bill))) {
+        extract($bill);
+    }
+    ?>
+    <div style="padding-left: 20px;">
+        <h2>Cảm ơn quý khách đã đặt hàng!</h2>
+        <div>THÔNG TIN ĐƠN HÀNG</div>
+        <?php echo "<pre>" ?>
+        <li>Mã đơn hàng: <?= $bill['ma_hd'] ?></li>
+        <li>Ngày đặt hàng: <?= $bill['ngay_dat'] ?></li>
+        <li>Tổng đơn hàng: <?= $bill['tong_tien'] ?></li>
+        <li>Phương thức thanh toán: <?= $bill['pttt'] == 0 ? 'Trả tiền khi nhận hàng' : 'Thanh toán online' ?></li>
+
+    </div>
+    <table class="table">
+        <thead class="thead-primary">
+            <tr class="text-center">
+                <th>&nbsp;</th>
+                <th>Người đặt hàng</th>
+                <th>Địa chỉ</th>
+                <th>Email</th>
+                <th>Điện thoại</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="text" name="ho_ten" value="<?= $_SESSION["user"]["ho_ten"] ?>" class="form-control"></td>
+                <td><input type=" text" name="dia_chi" value="<?= $bill['dia_chi'] ?>" class="form-control"></td>
+                <td><input type="text" name="email" value="<?= $_SESSION["user"]["email"] ?>" class="form-control"></td>
+                <td><input type="text" name="sdt" value="<?= $bill['sdt'] ?>" class="form-control"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table">
+        <?php bill_chi_tiet($billct); ?>
+    </table>
+
+    </div>
+    </div>

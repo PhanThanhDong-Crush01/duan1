@@ -1,47 +1,98 @@
-<div class="row">
-    <div class="row frmtitle">
-        <h1>DANH SÁCH TÀI KHOẢN</h1>
+<div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <h4 class="page-title">Danh Sách User</h4>
+            </div>
+        </div>
     </div>
-    <div class="row frmcontent">
-        <form action="#" method="post">
-            <div class="row mb10 frmdsloai">
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>MÃ TK</th>
-                        <th>TÊN TK</th>
-                        <th>MẬT KHẨU</th>
-                        <th>EMAIL</th>
-                        <th>ĐỊA CHỈ</th>
-                        <th>ĐIỆN THOẠI</th>
-                        <th>VAI TRÒ</th>
-                        <th>Action</th>
-                    </tr>
-                    <?php
-                    foreach ($listtaikhoan as $taikhoan) {
-                        extract($taikhoan);
-                        $xoatk = "index.php?act=xoatk&ma_kh=" . $ma_kh;
-                        echo '<tr>
-                                <td><input type="checkbox" name="" id=""></td>
-                                <td>' . $ma_kh . '</td>
-                                <td>' . $ho_ten . '</td>
-                                <td>' . $mat_khau . '</td>
-                                <td>' . $email . '</td>
-                                <td>' . $dia_chi . '</td>
-                                <td>' . $sdt . '</td>
-                                <td>' . ($vai_tro = 1 ? 'Admin' : 'Khách Hàng') . '</td>
-                                <td><a href="' . $xoatk . '"><input type="button" value="Xóa"></a></td>
-                            </tr>';
-                    }
-                    ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Danh sách Admin</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Tên kh</th>
+                                    <th scope="col">Hình</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Số đt</th>
+                                    <th scope="col">Địa Chỉ</th>
+                                    <th scope="col">Vai Trò</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($listtaikhoan as $taikhoan) {
+                                    extract($taikhoan);
 
-                </table>
+                                    $hinhpath = "../upload/" . $hinh;
+                                    if (is_file($hinhpath)) {
+                                        $hinh = "<img src='" . $hinhpath . "' width='150'>";
+                                    } else {
+                                        $hinh = "no photo";
+                                    }
+
+                                    $xoatk = "index.php?act=xoatk&ma_kh=" . $ma_kh;
+                                    echo '<tr>
+                                    <th scope="row">' . $ma_kh . '</th>
+                                    <td>' . $ho_ten . '</td>
+                                    <td>' . $hinh . '</td>
+                                    <td>' . $email . '</td>
+                                    <td>' . $dia_chi . '</td>
+                                    <td>' . $sdt . '</td>
+                                    <td>Admin</td>
+                                    <td><a href="' . $xoatk . '" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
+                                    </td>
+                                </tr>';
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="row mb10">
-                <input type="button" value="Chọn tất cả">
-                <input type="button" value="Bỏ chọn tất cả">
-                <input type="button" value="Xóa các mục chọn">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Danh sách Khách Hàng</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Tên kh</th>
+                                    <th scope="col">Hình</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Số đt</th>
+                                    <th scope="col">Địa Chỉ</th>
+                                    <th scope="col">Vai Trò</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>khách hàng</td>
+                                    <td><a href="" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </form>
+        </div>
     </div>
-</div>

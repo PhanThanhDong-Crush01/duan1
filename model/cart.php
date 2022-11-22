@@ -4,53 +4,69 @@ function viewcart($del)
     global $img_path;
     $tong = 0;
     $i = 0;
-    if ($del == 1) {
-        $xoasp_th = '<th>Thao tác</th>';
-        $xoasp_td2 = '<td></td>';
-    } else {
-        $xoasp_th = '';
-        $xoasp_td2 = '';
-    }
-    echo '<tr>
-            <th>Hình</th>
-            <th>Sản phẩm</th>
-            <th>Đơn giá</th>
-            <th>Số lượng</th>
-            <th>Thành tiền</th>
-            ' . $xoasp_th . '   
-        </tr>';
+
+    echo '<thead class="thead-primary">
+            <tr class="text-center">
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Color</th>
+                <th>Size</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>';
     foreach ($_SESSION['mycart'] as $cart) {
         $hinh = $img_path . $cart[2];
         $ttien = $cart[3] * $cart[4];
         $tong += $ttien;
         if ($del == 1) {
-            $xoasp_td = '<td><a href="index.php?act=delcart&idcart=' . $i . '"><input type="button" value="Xóa"></a></td>';
+            $xoasp_td = '<a href="index.php?act=delcart&idcart=' . $i . '"><input type="button" value="Xóa"></a>';
         } else {
             $xoasp_td = '';
         }
-        echo '
-                    <tr>
-                    <td><img src="' . $hinh . '" alt="" height="80px"></td>
-                    <td>' . $cart[1] . '</td>
-                    <td>' . $cart[3] . '</td>
-                    <td>' . $cart[4] . '</td>
-                    <td>' . $ttien . '</td>
-                    ' . $xoasp_td . '
-                </tr>';
+        echo '<tr class="text-center">
+                <td class="product-remove"></td>
+
+                <td class="image-prod">
+                    <img src="' . $hinh . '" alt="hinh" class="img">
+                </td>
+
+                <td class="product-name">
+                    <h3>' . $cart[1] . '</h3>
+                </td>
+
+                <td class="price">' . $cart[3] . '</td>
+
+                <td class="quantity">' . $cart[4] . '</td>
+
+                <td class="quantity">Đen</td>
+
+                <td class="quantity">M</td>
+
+                <td class="quantity">' . $ttien . '</td>
+
+                <td class="quantity">' . $xoasp_td . '</td>
+            </tr>
+            ';
         $i += 1;
     }
     echo '<tr>
-        <td colspan="4">Tổng đơn hàng</td>
-        <td>' . $tong . '</td>
-        ' . $xoasp_td2 . '
-    </tr>';
+            <td colspan="4">Tổng đơn hàng</td>
+            <td>' . $tong . '</td>
+        </tr>
+    </tbody>';
 }
 function bill_chi_tiet($billct)
 {
     global $img_path;
     $tong = 0;
     $i = 0;
-    echo '<tr>
+    echo '<thead class="thead-primary">
+            <tr>
             <th>Hình</th>
             <th>Sản phẩm</th>
             <th>Đơn giá</th>
@@ -58,7 +74,9 @@ function bill_chi_tiet($billct)
             <th>Màu</th>
             <th>Size</th>
             <th>Thành tiền</th>
-        </tr>';
+        </tr>
+        </thead>
+        <tbody>';
     foreach ($billct as $cart) {
         $sql = "select * from san_pham where ma_sp = " . $cart['ma_sp'];
         $san_pham = pdo_query_one($sql);
@@ -67,7 +85,7 @@ function bill_chi_tiet($billct)
         $tong += $cart['tien'];
         echo '
                     <tr>
-                    <td><img src="' . $hinh . '" alt="" height="80px"></td>
+                    <td><img src="' . $hinh . '" alt="" height="100px"></td>
                     <td>' . $san_pham['ten_sp'] . '</td>
                     <td>' . $san_pham['don_gia'] . '</td>
                     <td>' . $cart['so_luong'] . '</td>
@@ -80,7 +98,8 @@ function bill_chi_tiet($billct)
     echo '<tr>
         <td colspan="4">Tổng đơn hàng</td>
         <td>' . $tong . '</td>
-    </tr>';
+    </tr>
+    </tbody>';
 }
 function tongdonhang()
 {
