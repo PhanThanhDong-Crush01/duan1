@@ -1,43 +1,98 @@
-<div class="row">
-            <div class="row frmtitle"><h1>THÊM MỚI SẢN PHẨM</h1></div>
-            <div class="row frmcontent">
-                <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-                    <div class="row mb10">
-                        Danh mục <br>
-                        <select name="ma_loai">
+<div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <h4 class="page-title">Thêm Sản Phẩm Mới</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Thêm Sản Phẩm</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <form action="index.php?act=addsp" method="post" enctype="multipart/form-data" style="width: 50%; margin: 0 auto;">
+                            <div class="form-group">
+                                <label class="col-md-12">Tên sản phẩm</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control form-control-line" name="tensp">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Hình ảnh</label>
+                                <div class="col-md-12">
+                                    <input type="file" class="form-control form-control-line" name="hinh">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Đơn giá</label>
+                                <div class="col-md-12">
+                                    <input type="number" class="form-control form-control-line" name="don_gia">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Giảm Giá</label>
+                                <div class="col-md-12">
+                                    <input type="number" class="form-control form-control-line" name="giam_gia">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Ngày nhập</label>
+                                <div class="col-md-12">
+                                    <input type="date" class="form-control form-control-line" name="ngay_nhap">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Màu</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control form-control-line" name="mau">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Size</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control form-control-line" name="size">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Mô tả</label>
+                                <div class="col-md-12">
+                                    <textarea rows="5" class="form-control form-control-line" name="mo_ta"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Đặc biệt</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control form-control-line" name="dac_biet">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-12">loại sản phẩm</label>
+                                <div class="col-sm-12">
+                                    <select name="ma_loai" class="form-select shadow-none form-control-line">
+                                        <?php
+                                        foreach ($listdanhmuc as $danhmuc) {
+                                            extract($danhmuc);
+                                            echo '<option value="' . $ma_loai . '">' . $ten_loai . '</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <button class="btn btn-success text-white" name="themmoi">Add</button>
+                                </div>
+                            </div>
                             <?php
-                                foreach ($listdanhmuc as $danhmuc) {
-                                    extract($danhmuc);
-                                    echo '<option value="'.$ma_loai.'">'.$ten_loai.'</option>';
-                                }
+                            if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
                             ?>
-                        </select>
+                        </form>
                     </div>
-                    <div class="row mb10">
-                        Tên sản phẩm <br>
-                        <input type="text" name="tensp">
-                    </div>
-                    <div class="row mb10">
-                        Giá <br>
-                        <input type="text" name="giasp">
-                    </div>
-                    <div class="row mb10">
-                        Hình <br>
-                        <input type="file" name="hinh">
-                    </div>
-                    <div class="row mb10">
-                        Mô tả <br>
-                        <textarea name="mota" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="row mb10">
-                        <input type="submit" name="themmoi" value="Thêm mới">
-                        <input type="reset" value="Nhập lại">
-                        <a href="index.php?act=listsp"><input type="button" value="Danh sách"></a>
-                    </div>
-                    <?php
-                         if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
-                    ?>
-                </form>
+                </div>
             </div>
         </div>
     </div>

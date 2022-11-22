@@ -1,53 +1,63 @@
-<div class="row">
-    <div class="row frmtitle mb">
-        <h1>DANH SÁCH ĐƠN HÀNG</h1>
-    </div>
-    <form action="index.php?act=listbill" method="post">
-        <input type="text" name="kyw" placeholder="Nhập mã đơn hàng">
-        <input type="submit" name="listok" value="GO">
-    </form>
-    <div class="row frmcontent">
-        <div class="row mb10 frmdsloai">
-            <table>
-                <tr>
-                    <th></th>
-                    <th>MÃ ĐƠN HÀNG</th>
-                    <th>KHÁCH HÀNG</th>
-                    <th>SỐ LƯỢNG HÀNG</th>
-                    <th>GIÁ TRỊ ĐƠN HÀNG</th>
-                    <th>TÌNH TRẠNG ĐƠN HÀNG</th>
-                    <th>NGÀY ĐẶT HÀNG</th>
-                    <th>THAO TÁC</th>
-                </tr>
-                <?php
-                foreach ($listbill as $bill) {
-                    extract($bill);
-
-                    $sql = "select * from khach_hang where ma_kh = " . $bill["ma_kh"];
-                    $kh = pdo_query($sql);
-
-                    $khach_hang = '<li>' . $kh[0]["ho_ten"] . '</li> <br> <li>' . $kh[0]["email"] . '</li> <br> <li>' . $bill["dia_chi"] . '</li> <br> <li>' . $bill["sdt"] . '</li>';
-                    $ttdh = get_ttdh($bill["trang_thai"]);
-                    $countsp = loadall_cart_count($bill["ma_hd"]);
-                    echo '<tr>
-                                <td><input type="checkbox" name="" id=""></td>
-                                <td>' . $bill['ma_hd'] . '</td>
-                                <td>' . $khach_hang . '</td>
-                                <td>' . $countsp . '</td>
-                                <td><strong>' . $bill['tong_tien'] . '</strong></td>
-                                <td>' . $ttdh . '</td>
-                                <td>' . $bill['ngay_dat'] . '</td>
-                                <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                            </tr>';
-                }
-                ?>
-            </table>
-        </div>
-        <div class="row mb10">
-            <input type="button" value="Chọn tất cả">
-            <input type="button" value="Bỏ chọn tất cả">
-            <input type="button" value="Xóa các mục chọn">
-            <a href="index.php?act=adddm"><input type="button" value="Nhập thêm"></a>
+<div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <h4 class="page-title">Danh Sách Hóa Đơn</h4>
+            </div>
         </div>
     </div>
-</div>
+    <div class="row">
+        <form action="index.php?act=listbill" method="post">
+            <input type="text" name="kyw" placeholder="Nhập mã đơn hàng">
+            <!--tìm kiếm -->
+            <input type="submit" name="listok" value="Go">
+        </form>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Danh sách</h4>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">KHÁCH HÀNG</th>
+                                <th scope="col">SỐ LƯỢNG HÀNG</th>
+                                <th scope="col">GIÁ TRỊ ĐƠN HÀNG</th>
+                                <th scope="col">NGÀY ĐẶT HÀNG</th>
+                                <th scope="col">TRẠNG THÁI</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            foreach ($listbill as $bill) {
+                                extract($bill);
+
+                                $sql = "select * from khach_hang where ma_kh = " . $bill["ma_kh"];
+                                $kh = pdo_query($sql);
+
+                                $khach_hang = '<li>' . $kh[0]["ho_ten"] . '</li> <br> <li>' . $kh[0]["email"] . '</li> <br> <li>' . $bill["dia_chi"] . '</li> <br> <li>' . $bill["sdt"] . '</li>';
+                                $ttdh = get_ttdh($bill["trang_thai"]);
+                                $countsp = loadall_cart_count($bill["ma_hd"]);
+                                echo '<tr>
+                                    <th scope="row">' . $bill['ma_hd'] . '</th>
+                                    <td>' . $khach_hang . '</td>
+                                    <td>' . $countsp . '</td>
+                                    <td>' . $bill['tong_tien'] . '</td>
+                                    <td>' . $bill['ngay_dat'] . '</td>
+                                    <td>' . $ttdh . '</td>
+                                    <td><a href="" class="btn btn-success text-white">Cập nhật
+                                            trạng thái</a>
+                                    </td>
+                                </tr>';
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>

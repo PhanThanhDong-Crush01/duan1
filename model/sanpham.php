@@ -8,7 +8,7 @@ function delete_sanpham($id){
     pdo_query($sql);
 }
 function loadall_sanpham_home(){
-    $sql="select * from san_pham where 1 order by ma_sp desc limit 0,9";
+    $sql="select * from san_pham where 1 order by ma_sp desc limit 0,8";
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
@@ -56,4 +56,3 @@ function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$filename){
         $sql="update san_pham set ma_loai='".$iddm."',ten_sp='".$tensp."',don_gia='".$giasp."',mo_ta='".$mota."' where ma_sp=".$id;
     pdo_execute($sql);
 }
-?>

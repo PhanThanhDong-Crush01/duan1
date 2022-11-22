@@ -1,7 +1,9 @@
+
 <?php
 session_start();
 include "model/pdo.php";
 include "model/danhmuc.php";
+include "model/binhluan.php";
 include "model/sanpham.php";
 include "model/taikhoan.php";
 include "model/cart.php";
@@ -34,6 +36,8 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                 $id = $_GET['idsp'];
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
+                $idpro = $ma_sp;
+                $dsbl = loadall_binhluan($idpro);
                 $sp_cung_loai = load_sanpham_cungloai($id, $ma_loai);
                 include "view/sanphamct.php";
             } else {
@@ -55,20 +59,20 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             include "view/taikhoan/dangky.php";
             break;
         case 'dangnhap':
-            if (isset($_POST['dangnhap']) && ($_POST['dangnhap'] > 0)) {
+            if (isset($_POST['dangnhap'])) {
                 $ho_ten = $_POST['user'];
                 $mat_khau = $_POST['pass'];
                 $checkuser = checkuser($ho_ten, $mat_khau);
                 if (is_array($checkuser)) {
                     $_SESSION['user'] = $checkuser;
-                    header('location: index.php');
+                    include "view/home.php";
+                    //header('location: index.php');
                 } else {
-                    echo  "<h1>Tài khoản không tồn tại. Vui lòng kiểm tra hoặc đăng ký!</h1>";
+                    include "view/taikhoan/dang_nhap_view.php";
                 }
             }
-            include "view/taikhoan/dang_ky_view.php";
             break;
-        case 'edit_taikhoan':
+        case 'edit_taikhoan_fun':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'] > 0)) {
                 $email = $_POST['email'];
                 $ho_ten = $_POST['user'];
@@ -101,11 +105,11 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             include "view/taikhoan/quenmk.php";
             break;
         case 'addtocart':
-            if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {
-                $ma_sp = $_POST['ma_sp'];
-                $ten_sp = $_POST['ten_sp'];
-                $hinh = $_POST['hinh'];
-                $don_gia = $_POST['don_gia'];
+            if ($_GET["ma_sp"] > 0) {
+                $id = $_GET["ma_sp"];
+                $onesp = loadone_sanpham($id);
+                extract($onesp);
+                $ma_sp = $id;
                 $soluong = 1;
                 $mau = 'đen';
                 $size = 'M';
@@ -121,7 +125,7 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             } else {
                 $_SESSION['mycart'] = [];
             }
-            header('location: index.php?act=viewcart');
+            include "view/cart/viewcart.php";
             break;
         case 'viewcart':
             include "view/cart/viewcart.php";
@@ -163,13 +167,16 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             break;
         case 'thoat':
             session_unset();
-            header('location: index.php');
+            include "view/home.php";
             break;
         case 'dangnhapview':
             include "view/taikhoan/dang_nhap_view.php";
             break;
         case 'dangkyview':
             include "view/taikhoan/dang_ky_view.php";
+            break;
+        case 'edit_taikhoan':
+            include "view/taikhoan/edit_taikhoan.php";
             break;
         case 'shop':
             include "view/shop.php";

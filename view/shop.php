@@ -2,12 +2,27 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Shop</span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Shop</span></p>
                 <h1 class="mb-0 bread">Shop</h1>
             </div>
         </div>
     </div>
 </div>
+<?php
+if (isset($_GET['trang'])) {
+    $page = $_GET['trang'];
+} else {
+    $page = 1;
+}
+if ($page == '' || $page == 1) {
+    $start = 0;
+} else {
+    $start = ($page) * 8 - 8;
+}
+$sql = "select * from san_pham where 1 order by ma_sp desc limit $start,8";
+$spnew  = pdo_query($sql);
+
+?>
 
 <section class="ftco-section bg-light">
     <div class="container">
@@ -42,12 +57,12 @@
 	                                </p>
 	                            </div>
 	                        </div>
-	                        <h3><a href="' . $linksp . '">' . $ten_sp . '</a></h3>
+	                        <h3><a href="' . $linksp . '" style="word-wrap: break-word;white-space: normal;overflow: hidden;display: -webkit-box; text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp: 2;">' . $ten_sp . '</a></h3>
 	                        <div class="pricing" >
 	                            <p class="price"><span style="color: red;">$' . $don_gia . '</span></p>
 	                        </div>
 	                        <p class="bottom-area d-flex px-3">
-	                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i>
+	                            <a href="index.php?act=addtocart&ma_sp=' . $ma_sp . '" class="add-to-cart text-center py-2 mr-1"><span>Add to cart<i class="ion-ios-add ml-1"></i>
                                 </span></a>
 	                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
 	                        </p>
@@ -58,18 +73,30 @@
                     }
                     ?>
                 </div>
+
+                <?php
+                $mysqli = new mysqli("localhost", "root", "", "chicor");
+                // Check connection
+                if ($mysqli->connect_errno) {
+                    echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+                    exit();
+                }
+                $sql_trang = mysqli_query($mysqli, "select * from san_pham");
+                $row_count = mysqli_num_rows($sql_trang); //đếm số sp 
+                $trang = ceil($row_count / 9); //làm tròn lên
+                ?>
+
                 <!-- phân trang -->
                 <div class="row mt-5">
                     <div class="col text-center">
+                        <h6>Trang hiện tại: <a><?php echo $page ?></a></h6>
                         <div class="block-27">
                             <ul>
-                                <li><a href="#">&lt;</a></li>
-                                <li class="active"><span>1</span></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">&gt;</a></li>
+                                <?php
+                                for ($i = 1; $i <= $trang; $i++) {
+                                ?>
+                                    <li><a href="index.php?act=shop&trang=<?php echo $i ?>"><?php echo $i ?></a></li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
@@ -83,88 +110,22 @@
                         <h2 class="heading">Categories</h2>
                         <div class="fancy-collapse-panel">
                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="headingOne">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Men's Shoes
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                        <div class="panel-body">
-                                            <ul>
-                                                <li><a href="#">Sport</a></li>
-                                                <li><a href="#">Casual</a></li>
-                                                <li><a href="#">Running</a></li>
-                                                <li><a href="#">Jordan</a></li>
-                                                <li><a href="#">Soccer</a></li>
-                                                <li><a href="#">Football</a></li>
-                                                <li><a href="#">Lifestyle</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end one 1 cate -->
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="headingTwo">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Women's Shoes
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                        <div class="panel-body">
-                                            <ul>
-                                                <li><a href="#">Sport</a></li>
-                                                <li><a href="#">Casual</a></li>
-                                                <li><a href="#">Running</a></li>
-                                                <li><a href="#">Jordan</a></li>
-                                                <li><a href="#">Soccer</a></li>
-                                                <li><a href="#">Football</a></li>
-                                                <li><a href="#">Lifestyle</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end one 1 cate -->
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="headingThree">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accessories
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                        <div class="panel-body">
-                                            <ul>
-                                                <li><a href="#">Jeans</a></li>
-                                                <li><a href="#">T-Shirt</a></li>
-                                                <li><a href="#">Jacket</a></li>
-                                                <li><a href="#">Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end one 1 cate -->
-                                <!-- <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="headingFour">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">Clothing
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                        <div class="panel-body">
-                                            <ul>
-                                                <li><a href="#">Jeans</a></li>
-                                                <li><a href="#">T-Shirt</a></li>
-                                                <li><a href="#">Jacket</a></li>
-                                                <li><a href="#">Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- end one 1 cate -->
+                                <?php
+                                $i = 0;
+                                foreach ($dsdm as $dm) {
+                                    extract($dm);
+                                    $linksp = "index.php?act=sanphamct&idsp=" . $ma_sp;
+                                    echo '<div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">' . $ten_loai . '
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>';
+                                    $i += 1;
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>

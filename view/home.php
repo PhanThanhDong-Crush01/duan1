@@ -122,7 +122,7 @@
 					//<!-- 1 item -->
 					echo '<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex" >
 	                <div class="product d-flex flex-column">
-	                    <a href="' . $linksp . '" class="img-prod"><img class="img-fluid" src="' . $ha . '" alt="Colorlib Template">
+	                    <a href="' . $linksp . '" class="img-prod"><img class="img-fluid" src="' . $ha . '" alt="Colorlib Template" width="255" height="255">
 	                        <div class="overlay"></div>
 	                    </a>
 	                    <div class="text py-3 pb-4 px-3">
@@ -140,12 +140,12 @@
 	                                </p>
 	                            </div>
 	                        </div>
-	                        <h3 style="word-wrap: break-word; white-space: normal; overflow: hidden; display: -webkit-box; text-overflow: ellipsis; -webkit-box-orient: vertical; -webki-line-clamp: 2;"><a href="' . $linksp . '">' . $ten_sp . '</a></h3>
+	                        <h3><a href="' . $linksp . '" style="word-wrap: break-word;white-space: normal;overflow: hidden;display: -webkit-box; text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp: 2;">' . $ten_sp . '</a></h3>
 	                        <div class="pricing" >
 	                            <p class="price"><span style="color: red;">$' . $don_gia . '</span></p>
 	                        </div>
 	                        <p class="bottom-area d-flex px-3">
-	                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i>
+	                            <a href="index.php?act=addtocart&ma_sp=' . $ma_sp . '" class="add-to-cart text-center py-2 mr-1"><span>Add to cart<i class="ion-ios-add ml-1"></i>
                                 </span></a>
 	                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
 	                        </p>

@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-md pr-4 d-flex topper align-items-center">
                             <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                            <span class="text">youremail@email.com</span>
+                            <span class="text">team6chicorshop@email.com</span>
                         </div>
                         <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
                             <span class="text">3-5 Business days delivery &amp; Free Returns</span>
@@ -71,9 +71,27 @@
                     if (isset($_SESSION['user'])) {
                         extract($_SESSION['user']);
                     ?>
-                        <li class="nav-item"><a class="nav-link" href="">Xin chào, <?= $ho_ten ?></a></li>
+                        <li class="nav-item taikhoan"><a class="nav-link">Xin chào, <?= $ho_ten ?></a>
+                            <p class="dangxuat">
+                                <a class="nav-link" href="index.php?act=edit_taikhoan">Edit user</a>
+                                <a class="nav-link" href="index.php?act=thoat">Đăng xuất</a>
+                            </p>
+                        </li>
+                        <li class="nav-item cta cta-colored mybill">
+                            <a class="nav-link"><span class="icon-shopping_cart"></span>[0]</a>
+                            <p class="mybillshow">
+                                <a href="index.php?act=viewcart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a>
+                                <a href="index.php?act=mybill" class="nav-link">Mybill</a>
+                            </p>
+                        </li>
+                        <?php if ($vai_tro > 0) { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin/index.php?act=listsp">Đăng nhập Admin</a>
+                            </li>
+                        <?php } ?>
                     <?php
-                    } else {
+                    }
+                    if (!isset($_SESSION['user'])) {
                     ?>
                         <li class="nav-item"><a href="index.php?act=dangnhapview" class="nav-link add-to-cart"><button style="background-color: #c2a942; border-radius: 10px; color: while; font-weight: 600;">#Đăng
                                     nhập</button></a></li>
@@ -85,3 +103,46 @@
         </div>
     </nav>
     <!-- END nav -->
+    <style>
+        .mybillshow {
+            display: none;
+        }
+
+        .mybill:hover .mybillshow {
+            display: block;
+            background-color: #c2a942;
+            position: absolute;
+            animation: hien-children linear .5s;
+        }
+
+        .mybillshow a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .dangxuat {
+            display: none;
+        }
+
+        .taikhoan:hover .dangxuat {
+            display: block;
+            background-color: #c2a942;
+            position: absolute;
+            animation: hien-children linear .5s;
+        }
+
+        .dangxuat a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        @keyframes hien-children {
+            to {
+                transform: translateY(1%);
+            }
+
+            from {
+                transform: translateY(0%);
+            }
+        }
+    </style>
