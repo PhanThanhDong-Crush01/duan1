@@ -49,20 +49,20 @@
                                     $xoasp = "index.php?act=xoasp&ma_sp=" . $ma_sp;
                                     $hinhpath = "../upload/" . $hinh;
                                     if (is_file($hinhpath)) {
-                                        $hinh = "<img src='" . $hinhpath . "' width='150'>";
+                                        $hinh = "<img src='" . $hinhpath . "' width='100'>";
                                     } else {
-                                        $hinh = "no photo";
+                                        $hinh = "no photo".$hinhpath;
                                     }
                                     echo '<tr>
                                     <th scope="row">' . $ma_sp . '</th>
                                     <td>' . $ten_sp . '</td>
                                     <td>' . $hinh . '</td>
                                     <td  style="color: red;">' . $don_gia . '.000</td>
-                                    <td>' . $ngay_nhap . '</td>
+                                    <td width="10%">' . $ngay_nhap . '</td>
                                     <td>' . $mau . '</td>
                                     <td>' . $size . '</td>
-                                    <td class="mo_ta">' . $dac_biet = null ? "không" : "rất đặc biệt" . '</td>
-                                    <td><a href="' . $suasp . '" class="btn btn-success text-white">Sửa</a>
+                                    <td class="mo_ta" width="10%">' . $dac_biet = null ? "không" : "rất đặc biệt" . '</td>
+                                    <td width="12%"><a href="' . $suasp . '" class="btn btn-success text-white">Sửa</a>
                                         <a href="' . $xoasp . '" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
                                     </td>
                                 </tr>';

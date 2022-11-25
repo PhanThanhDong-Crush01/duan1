@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('../view/images/bg_6.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -62,9 +62,9 @@ $spnew  = pdo_query($sql);
 	                            <p class="price"><span style="color: red;">$' . $don_gia . '</span></p>
 	                        </div>
 	                        <p class="bottom-area d-flex px-3">
-	                            <a href="index.php?act=addtocart&ma_sp=' . $ma_sp . '" class="add-to-cart text-center py-2 mr-1"><span>Add to cart<i class="ion-ios-add ml-1"></i>
+	                            <a href="' . $linksp . '" class="add-to-cart text-center py-2 mr-1"><span>Add to cart<i class="ion-ios-add ml-1"></i>
                                 </span></a>
-	                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+	                            <a href="' . $linksp . '" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
 	                        </p>
 	                    </div>
 	                </div> 

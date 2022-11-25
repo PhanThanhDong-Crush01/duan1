@@ -1,4 +1,4 @@
-    <div class="hero-wrap hero-bread" style="background-image: url('../view/images/bg_6.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
@@ -49,19 +49,23 @@
                                         <td><input type=" text" name="dia_chi" value="<?= $address ?>" class="form-control"></td>
                                         <td><input type="text" name="email" value="<?= $email ?>" class="form-control"></td>
                                         <td><input type="text" name="sdt" value="<?= $tel ?>" class="form-control"></td>
-                                        <td><input type="radio" name="pttt" checked value="0">Trả tiền khi nhận hàng
-                                            <input type="radio" name="pttt" value="1">Thanh toán online
+                                        <td>
+                                            <input type="radio" name="pttt" checked value="0" >Trả tiền khi nhận hàng <br>
+                                            <input type="radio" name="pttt" value="1" >Thanh toán online
                                         </td>
                                     </tr>
+                                </tbody>
                             </table>
+                            <div  class="No_hienQR" style="margin: 0 auto;"><img src="/web2041/upload/ma_QR_BIDV.jpg" alt="QR" width="200px"></div>
                         </div>
                 </div>
+                
                 <div class="cart-list">
                     <table class="table">
                         <?php viewcart(0) ?>
                     </table>
                 </div>
-                <div class="row mb bill">
+                <div class="bill">
                     <input type="submit" value="ĐỒNG Ý ĐẶT HÀNG" name="dongydathang" class="btn btn-primary py-3 px-4">
                 </div>
                 </form>

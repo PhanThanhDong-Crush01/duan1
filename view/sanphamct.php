@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('./images/bg_6.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -73,7 +73,10 @@
                         <p style="color: #000;">80 piece available</p>
                     </div>
                 </div>
-                <p><a href="cart.html" class="btn btn-black py-3 px-5 mr-2">Add to Cart</a><a href="cart.html" class="btn btn-primary py-3 px-5">Buy now</a></p>
+                <p>
+                    <a href="index.php?act=addtocart&ma_sp=<?= $ma_sp ?>" class="btn btn-black py-3 px-5 mr-2">Add to Cart</a>
+                    <a href="index.php?act=addtocart&ma_sp=<?= $ma_sp ?>" class="btn btn-primary py-3 px-5">Buy now</a>
+                </p>
             </div>
         </div>
 

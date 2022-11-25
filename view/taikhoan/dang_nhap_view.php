@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('../view/images/bg_6.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -17,7 +17,7 @@
     <div class="container py-5 h-100">
         <div class="row d-flex align-items-center justify-content-center h-100">
             <div class="col-md-8 col-lg-7 col-xl-6">
-                <img src="../view/images/svg_dang_nhap.jpg" class="img-fluid" alt="Phone image">
+                <img src="/web2041/view/images/svg_dang_nhap.jpg" class="img-fluid" alt="Phone image">
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                 <form action="index.php?act=dangnhap" method="post">

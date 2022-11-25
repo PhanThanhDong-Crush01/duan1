@@ -1,4 +1,4 @@
-    <div class="hero-wrap hero-bread" style="background-image: url('../view/images/bg_6.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
@@ -21,7 +21,7 @@
                     <div class="col-lg-4 col-xlg-3">
                         <div class="card">
                             <div class="card-body">
-                                <center class="mt-4"> <img src="../../assets/images/users/5.jpg" class="rounded-circle" width="150" />
+                                <center class="mt-4"> <img src="/web2041/upload/<?= $hinh?>" class="rounded-circle" width="100" />
                                     <h4 class="card-title mt-2"><?= $ho_ten ?></h4>
                                     <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
                                     <div class="row text-center justify-content-md-center">

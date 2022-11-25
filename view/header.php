@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,23 +12,23 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
-    <link rel="stylesheet" href="../view/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="../view/css/animate.css">
+    <link rel="stylesheet" href="/web2041/view/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/web2041/view/css/animate.css">
 
-    <link rel="stylesheet" href="../view/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../view/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../view/css/magnific-popup.css">
+    <link rel="stylesheet" href="/web2041/view/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/web2041/view/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/web2041/view/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="../view/css/aos.css">
+    <link rel="stylesheet" href="/web2041/view/css/aos.css">
 
-    <link rel="stylesheet" href="../view/css/ionicons.min.css">
+    <link rel="stylesheet" href="/web2041/view/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="../view/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="../view/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/web2041/view/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/web2041/view/css/jquery.timepicker.css">
 
-    <link rel="stylesheet" href="../view/css/flaticon.css">
-    <link rel="stylesheet" href="../view/css/icomoon.css">
-    <link rel="stylesheet" href="../view/css/style.css">
+    <link rel="stylesheet" href="/web2041/view/css/flaticon.css">
+    <link rel="stylesheet" href="/web2041/view/css/icomoon.css">
+    <link rel="stylesheet" href="/web2041/view/css/style.css">
 </head>
 
 <body class="goto-here">

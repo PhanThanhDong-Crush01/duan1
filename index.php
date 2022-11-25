@@ -66,7 +66,6 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                 if (is_array($checkuser)) {
                     $_SESSION['user'] = $checkuser;
                     include "view/home.php";
-                    //header('location: index.php');
                 } else {
                     include "view/taikhoan/dang_nhap_view.php";
                 }
@@ -105,7 +104,10 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             include "view/taikhoan/quenmk.php";
             break;
         case 'addtocart':
-            if ($_GET["ma_sp"] > 0) {
+            if ($_SESSION == null) {
+                include "view/taikhoan/dang_nhap_view.php";
+            }
+            else if ($_GET["ma_sp"] > 0) {
                 $id = $_GET["ma_sp"];
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
