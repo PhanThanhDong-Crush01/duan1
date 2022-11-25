@@ -89,22 +89,21 @@
     </svg></div>
 
 
-<script src="../view/js/jquery.min.js"></script>
-<script src="../view/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="../view/js/popper.min.js"></script>
-<script src="../view/js/bootstrap.min.js"></script>
-<script src="../view/js/jquery.easing.1.3.js"></script>
-<script src="../view/js/jquery.waypoints.min.js"></script>
-<script src="../view/js/jquery.stellar.min.js"></script>
-<script src="../view/js/owl.carousel.min.js"></script>
-<script src="../view/js/jquery.magnific-popup.min.js"></script>
-<script src="../view/js/aos.js"></script>
-<script src="../view/js/jquery.animateNumber.min.js"></script>
-<script src="../view/js/bootstrap-datepicker.js"></script>
-<script src="../view/js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="../view/js/google-map.js"></script>
-<script src="../view/js/main.js"></script>
+<script src="/web2041/view/js/jquery.min.js"></script>
+<script src="/web2041/view/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/web2041/view/js/popper.min.js"></script>
+<script src="/web2041/view/js/bootstrap.min.js"></script>
+<script src="/web2041/view/js/jquery.easing.1.3.js"></script>
+<script src="/web2041/view/js/jquery.waypoints.min.js"></script>
+<script src="/web2041/view/js/jquery.stellar.min.js"></script>
+<script src="/web2041/view/js/owl.carousel.min.js"></script>
+<script src="/web2041/view/js/jquery.magnific-popup.min.js"></script>
+<script src="/web2041/view/js/aos.js"></script>
+<script src="/web2041/view/js/jquery.animateNumber.min.js"></script>
+<script src="/web2041/view/js/bootstrap-datepicker.js"></script>
+<script src="/web2041/view/js/scrollax.min.js"></script>
+<script src="/web2041/view/js/google-map.js"></script>
+<script src="/web2041/view/js/main.js"></script>
 
 <script>
     let slideIndex = 1;

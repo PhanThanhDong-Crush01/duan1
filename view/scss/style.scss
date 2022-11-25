@@ -1089,7 +1089,7 @@ h1, h2, h3, h4, h5,
 		background: transparent;
 		padding: 0 15px;
 	}
-	button,.form-control{;
+	button,.form-control{
 		height: 40px !important;
 		text-align: center;
 		border: 1px solid rgba(0,0,0,.1) !important;
@@ -1149,8 +1149,6 @@ h1, h2, h3, h4, h5,
 	}
 }
 
-.nav-link-wrap{
-}
 .nav-pills{
 	width: 100%;
 	display: block;
@@ -1302,8 +1300,6 @@ h1, h2, h3, h4, h5,
 
 //CART
 .ftco-cart{
-	.input-group{
-	}
 	button{
 		i{
 			color: $primary;
@@ -1317,7 +1313,7 @@ h1, h2, h3, h4, h5,
 		background: transparent;
 		padding: 16px 20px;
 	}
-	button,.form-control{;
+	button,.form-control{
 		height: 54px !important;
 		text-align: center;
 		bordeR: 1px solid rgba(0,0,0,.05) !important;
