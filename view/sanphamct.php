@@ -37,7 +37,7 @@
                         <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
                     </p>
                 </div>
-                <p class="price"><span><?= $don_gia ?></span></p>
+                <p class="price"><span style="color: red;"><?= $don_gia ?>.000 VNĐ</span></p>
                 <p><?= $mo_ta ?></p>
                 </p>
                 <div class="row mt-4">

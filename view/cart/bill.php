@@ -56,7 +56,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div  class="No_hienQR" style="margin: 0 auto;"><img src="/web2041/upload/ma_QR_BIDV.jpg" alt="QR" width="200px"></div>
+                            <div  class="No_hienQR" style="margin: 0 auto;"><img src="/upload/ma_QR_BIDV.jpg" alt="QR" width="200px"></div>
+                           
                         </div>
                 </div>
                 

@@ -18,6 +18,7 @@
                     <th>Số lượng sản phẩm</th>
                     <th>Tổng giá trị đơn hàng</th>
                     <th>Tình trạng đơn hàng</th>
+                    <th>Hành động</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +35,10 @@
                             <td>' . $countsp . '</td>
                             <td>' . $bill['tong_tien'] . '</td>
                             <td>' . $ttdh . '</td>
+                            <td><div class="bill">
+                            <input type="submit" value="HỦY ĐẶT HÀNG" name="dongydathang" class="btn btn-primary py-3 px-4">
+                        </div>
+                        </td>
                         </tr>';
                     }
                 }

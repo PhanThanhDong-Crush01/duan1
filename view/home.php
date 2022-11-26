@@ -142,7 +142,7 @@
 	                        </div>
 	                        <h3><a href="' . $linksp . '" style="word-wrap: break-word;white-space: normal;overflow: hidden;display: -webkit-box; text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp: 2;">' . $ten_sp . '</a></h3>
 	                        <div class="pricing" >
-	                            <p class="price"><span style="color: red;">$' . $don_gia . '</span></p>
+	                            <p class="price"><span style="color: red;">' . $don_gia . '.000 VNĐ</span></p>
 	                        </div>
 	                        <p class="bottom-area d-flex px-3">
 	                            <a href="'. $linksp .'" class="add-to-cart text-center py-2 mr-1"><span>Add to cart<i class="ion-ios-add ml-1"></i>
