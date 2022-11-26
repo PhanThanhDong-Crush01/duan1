@@ -1,4 +1,8 @@
 <?php
+session_start();
+if ($_SESSION == null ) {
+    header('location: ../index.php?act=dangnhapview');
+}
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
