@@ -51,8 +51,12 @@ if (isset($_GET['act'])) {
             include "danhmuc/list.php";
             break;
             /*sản phẩm*/
-        case 'addsp':
-            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+            case 'addsp':
+                $listdanhmuc = loadall_danhmuc();   
+                include "sanpham/add.php";
+                break;
+        case 'addsp_new':
+            if (isset($_POST['themmoi'])) {
                 $iddm = $_POST['ma_loai'];
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['don_gia'];
@@ -74,8 +78,10 @@ if (isset($_GET['act'])) {
                     $thongbao = "Thêm thành công";
                 }
             }
-            $listdanhmuc = loadall_danhmuc();
-            include "sanpham/add.php";
+            $kyw = '';
+                $iddm = 0;
+            $listsanpham = loadall_sanpham($kyw, $iddm);
+            include "sanpham/list.php";
             break;
         case 'listsp':
             if (isset($_POST['listok']) && ($_POST['listok'])) {

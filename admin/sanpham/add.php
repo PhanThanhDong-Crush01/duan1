@@ -14,7 +14,7 @@
                         <h4 class="card-title">Thêm Sản Phẩm</h4>
                     </div>
                     <div class="table-responsive">
-                        <form action="index.php?act=addsp" method="post" enctype="multipart/form-data" style="width: 50%; margin: 0 auto;">
+                        <form action="index.php?act=addsp_new" method="post" enctype="multipart/form-data" style="width: 50%; margin: 0 auto;">
                             <div class="form-group">
                                 <label class="col-md-12">Tên sản phẩm</label>
                                 <div class="col-md-12">
