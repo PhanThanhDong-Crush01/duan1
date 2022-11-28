@@ -102,10 +102,9 @@
 <script src="/web2041/view/js/jquery.animateNumber.min.js"></script>
 <script src="/web2041/view/js/bootstrap-datepicker.js"></script>
 <script src="/web2041/view/js/scrollax.min.js"></script>
-<script src="/web2041/view/js/google-map.js"></script>
 <script src="/web2041/view/js/main.js"></script>
 
-<script>
+<!-- <script>
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -138,7 +137,7 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
-</script>
+</script> -->
 </body>
 
 </html>

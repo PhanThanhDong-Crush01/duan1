@@ -56,7 +56,7 @@ function viewcart($del)
     }
     echo '<tr>
             <td colspan="4">Tổng đơn hàng</td>
-            <td>' . $tong . '</td>
+            <td><input type="text" name="tong" value="' . $tong . '" readonly style="border: 1px solid white;"></td>
         </tr>
     </tbody>';
 }

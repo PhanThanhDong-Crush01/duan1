@@ -12,6 +12,16 @@ function loadall_sanpham_home(){
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
+function loadall_mau_size($idpro){
+    $sql="SELECT * FROM `mau_size` WHERE `idsp` = $idpro;";
+    $list_mau_size=pdo_query($sql);
+    return $list_mau_size;
+}
+function so_luong_sp($id_pro){
+    $sql="SELECT Sum(so_luong) as 'so_luong_tong' FROM `mau_size` WHERE idsp = $id_pro;";
+    $soluong=pdo_query($sql);
+    return $soluong;
+}
 function loadall_sanpham_top10(){
     $sql="select * from san_pham where 1 order by so_luot_xem desc limit 0,10";
     $listsanpham=pdo_query($sql);

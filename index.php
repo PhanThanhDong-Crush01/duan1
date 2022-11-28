@@ -26,7 +26,7 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                 $iddm = $_GET['iddm'];
             } else {
                 $iddm = 0;
-            }
+            } 
             $dssp = loadall_sanpham($kyw, $iddm);
             $tendm = load_ten_dm($iddm);
             include "view/sanpham.php";
@@ -37,6 +37,8 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
                 $idpro = $ma_sp;
+                $soluong =  so_luong_sp($idpro);
+                $list_mau_size = loadall_mau_size($idpro);
                 $dsbl = loadall_binhluan($idpro);
                 $sp_cung_loai = load_sanpham_cungloai($id, $ma_loai);
                 include "view/sanphamct.php";
@@ -104,10 +106,10 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             include "view/taikhoan/quenmk.php";
             break;
         case 'addtocart':
-            if ($_SESSION == null) {
+            if ($_SESSION["user"] === null) {
                 include "view/taikhoan/dang_nhap_view.php";
             }
-            else if ($_GET["ma_sp"] > 0) {
+            else {
                 $id = $_GET["ma_sp"];
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
@@ -118,8 +120,8 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                 $ttien = $soluong * $don_gia;
                 $spadd = [$ma_sp, $ten_sp, $hinh, $don_gia, $soluong, $mau, $size, $ttien];
                 array_push($_SESSION['mycart'], $spadd);
+                include "view/cart/viewcart.php";
             }
-            include "view/cart/viewcart.php";
             break;
         case 'delcart':
             if (isset($_GET['idcart'])) {
@@ -130,6 +132,7 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             include "view/cart/viewcart.php";
             break;
         case 'viewcart':
+            var_dump($_SESSION["mycart"]);
             include "view/cart/viewcart.php";
             break;
         case 'bill':

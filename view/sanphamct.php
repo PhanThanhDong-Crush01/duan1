@@ -31,10 +31,7 @@
                         <a href="#"><span class="ion-ios-star-outline"></span></a>
                     </p>
                     <p class="text-left mr-4">
-                        <a href="#" class="mr-2" style="color: #000;">100 <span style="color: #bbb;">Rating</span></a>
-                    </p>
-                    <p class="text-left">
-                        <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
+                        <a href="#" class="mr-2" style="color: #000;">Số lượng: <span style="color: blue;"><?php echo $soluong[0]["so_luong_tong"];?></span></a>
                     </p>
                 </div>
                 <p class="price"><span style="color: red;"><?= $don_gia ?>.000 VNĐ</span></p>
@@ -45,32 +42,32 @@
                         <div class="form-group d-flex">
                             <div class="select-wrap">
                                 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                <select name="" id="" class="form-control">
-                                    <option value="">Small</option>
-                                    <option value="">Medium</option>
-                                    <option value="">Large</option>
-                                    <option value="">Extra Large</option>
+                                <select name="mau_size" id="mau_size" class="form-control" onchange="so_luong_theo_mau_size()">
+                                    <?php foreach($list_mau_size as $mz): ?>
+                                        <option value="<?= $mz["mau_size"]?>"><?= $mz["mau_size"]?></option>
+                                    <?php endforeach ?>
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> 
+                    <h1 id="so_luong_sp"></h1>
                     <div class="w-100"></div>
                     <div class="input-group col-md-6 d-flex mb-3">
-                        <span class="input-group-btn mr-2">
-                            <button type="button" class="quantity-left-minus btn" data-type="minus" data-field="">
-                                <i class="ion-ios-remove"></i>
-                            </button>
-                        </span>
-                        <input type="text" id="quantity" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-                        <span class="input-group-btn ml-2">
-                            <button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
-                                <i class="ion-ios-add"></i>
-                            </button>
-                        </span>
-                    </div>
+	             	<span class="input-group-btn mr-2">
+	                	<button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="" onclick="quantity_left_minus()">
+	                   <i class="ion-ios-remove"></i>
+	                	</button>
+	            		</span>
+	             	<input type="text" id="quantity" name="quantity" class="quantity form-control input-number" value="1">
+	             	<span class="input-group-btn ml-2">
+	                	<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="" onclick="quantity_right_plus()">
+	                     <i class="ion-ios-add"></i>
+	                 </button>
+	             	</span>
+	          	</div>
                     <div class="w-100"></div>
                     <div class="col-md-12">
-                        <p style="color: #000;">80 piece available</p>
+                        <p style="color: #000;"></p>
                     </div>
                 </div>
                 <p>
@@ -86,12 +83,11 @@
         <div class="row mt-5">
             <div class="col-md-12 nav-link-wrap">
                 <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link ftco-animate active mr-lg-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Description</a>
+                    <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Bình Luận</a>
 
-                    <a class="nav-link ftco-animate mr-lg-1" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Manufacturer</a>
+                    <a class="nav-link ftco-animate active mr-lg-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Mô Tả</a>
 
-                    <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Reviews</a>
-
+                    <a class="nav-link ftco-animate mr-lg-1" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Sản Xuất</a>
                 </div>
             </div>
             <div class="col-md-12 tab-wrap">
@@ -231,3 +227,28 @@
         </div>
     </div>
 </section>
+
+<script>
+        function so_luong_theo_mau_size(){
+            const mau_size = document.querySelector("#mau_size").value;
+            const so_luong = document.querySelector("#so_luong_sp");
+            so_luong.innerHTML = mau_size;
+        }
+        
+		const quantity = document.querySelector(".quantity");
+
+        function quantity_left_minus(){
+            quantity.value -= 1;
+            if(quantity.value < 1){
+                quantity.value = 1;
+                return false;
+            }
+        }
+        function quantity_right_plus(){
+            quantity.value -= -1;
+            if(quantity.value >= <?php echo $soluong[0]["so_luong_tong"];?>){
+                quantity.value = <?php echo $soluong[0]["so_luong_tong"];?>;
+                return false;
+            }
+        }
+</script>

@@ -25,11 +25,6 @@
                                     $address = $_SESSION['user']['dia_chi'];
                                     $email = $_SESSION['user']['email'];
                                     $tel = $_SESSION['user']['sdt'];
-                                } else {
-                                    $name = "";
-                                    $address = "";
-                                    $email = "";
-                                    $tel = "";
                                 }
                                 ?>
                                 <thead class="thead-primary">
@@ -39,6 +34,7 @@
                                         <th>Địa chỉ</th>
                                         <th>Email</th>
                                         <th>Điện thoại</th>
+                                        <th>Tổng đơn hàng</th>
                                         <th colspan="2">Thanh toán</th>
                                     </tr>
                                 </thead>
@@ -49,6 +45,7 @@
                                         <td><input type=" text" name="dia_chi" value="<?= $address ?>" class="form-control"></td>
                                         <td><input type="text" name="email" value="<?= $email ?>" class="form-control"></td>
                                         <td><input type="text" name="sdt" value="<?= $tel ?>" class="form-control"></td>
+                                        <td><input type="text" name="tong" value="<?= $tel ?>" class="form-control"></td>
                                         <td>
                                             <input type="radio" name="pttt" checked value="0" >Trả tiền khi nhận hàng <br>
                                             <input type="radio" name="pttt" value="1" >Thanh toán online

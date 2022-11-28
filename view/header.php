@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/web2041/view/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/web2041/view/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="/web2041/view/css/aos.css">
+    <!-- <link rel="stylesheet" href="/web2041/view/css/aos.css"> -->
 
     <link rel="stylesheet" href="/web2041/view/css/ionicons.min.css">
 
