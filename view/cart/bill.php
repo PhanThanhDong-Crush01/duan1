@@ -47,17 +47,27 @@
                                         <td><input type="text" name="sdt" value="<?= $tel ?>" class="form-control"></td>
                                         <td><input type="text" name="tong" value="<?= $tel ?>" class="form-control"></td>
                                         <td>
-                                            <input type="radio" name="pttt" checked value="0" >Trả tiền khi nhận hàng <br>
-                                            <input type="radio" name="pttt" value="1" >Thanh toán online
+                                            <input type="radio" name="pttt" id="btn1" checked value="0">Trả tiền khi nhận hàng <br>
+                                            <input type="radio" name="pttt" id="btn2" value="1">Thanh toán online
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div  class="No_hienQR" style="margin: 0 auto;"><img src="/upload/ma_QR_BIDV.jpg" alt="QR" width="200px"></div>
-                           
+
+                            <div id="content" class="No_hienQR" style="margin: 0 auto; display: none;"><img src="/web2041-3/upload/ma_QR_BIDV.jpg" alt="QR" width="200px"></div>
+                            <script language="javascript">
+                                document.getElementById("btn1").onclick = function() {
+                                    document.getElementById("content").style.display = 'none';
+                                };
+
+                                document.getElementById("btn2").onclick = function() {
+                                    document.getElementById("content").style.display = 'block';
+                                };
+                            </script>
                         </div>
+
                 </div>
-                
+
                 <div class="cart-list">
                     <table class="table">
                         <?php viewcart(0) ?>
