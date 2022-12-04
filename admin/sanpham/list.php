@@ -35,8 +35,6 @@
                                     <th scope="col">Hình</th>
                                     <th scope="col">Đơn giá</th>
                                     <th scope="col">Ngày nhập</th>
-                                    <th scope="col">Màu</th>
-                                    <th scope="col">Size</th>
                                     <th scope="col">Đặc biệt</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -59,8 +57,6 @@
                                     <td>' . $hinh . '</td>
                                     <td  style="color: red;">' . $don_gia . '.000</td>
                                     <td width="10%">' . $ngay_nhap . '</td>
-                                    <td>' . $mau . '</td>
-                                    <td>' . $size . '</td>
                                     <td class="mo_ta" width="10%">' . $dac_biet = null ? "không" : "rất đặc biệt" . '</td>
                                     <td width="12%"><a href="' . $suasp . '" class="btn btn-success text-white">Sửa</a>
                                         <a href="' . $xoasp . '" class="btn btn-success text-white" style="background-color: red;">Xóa</a>

@@ -14,3 +14,6 @@
         $sql="delete from binh_luan where ma_bl=".$ma_bl;
         pdo_query($sql);
     }
+    function loadall_bl(){
+        echo "dbsdbsx";
+    }

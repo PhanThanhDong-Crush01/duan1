@@ -12,6 +12,15 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Danh sách</h4>
+                        <?php
+                        foreach ($listbinhluan as $binhluan) {
+                            $idpro=$binhluan['idpro']; }
+                            $sql = "SELECT ten_sp FROM `san_pham` where ma_sp = '$idpro';";
+                            $tensp = pdo_query_one($sql);
+                         echo '
+                         '.$tensp['ten_sp'].'
+                         ';
+                        ?>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-striped">

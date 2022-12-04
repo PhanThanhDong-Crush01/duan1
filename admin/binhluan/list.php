@@ -25,17 +25,32 @@
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
+                                <tbody>
+                                <?php
+                                foreach ($listsp as $sp) {
+                                    $idpro = $sp['ma_sp'];
+                                    $sql = "SELECT ten_sp FROM `san_pham` WHERE ma_sp = '$idpro';";
+                                    $sql1=  "SELECT COUNT(ma_bl) as 'tongbl' FROM `binh_luan` where idpro = '$idpro';";
+                                    $sql2=  "SELECT MAX(ngay_bl) as 'maxbl' FROM `binh_luan` where idpro = '$idpro';";
+                                    $sql3 =  "SELECT MIN(ngay_bl) as 'minbl' FROM `binh_luan` where idpro = '$idpro';";
+                                    $tensp = pdo_query_one($sql);
+                                    $countbl=pdo_query_one($sql1);
+                                    $oldbl=pdo_query_one($sql2);
+                                    $newbl=pdo_query_one($sql3);
+                                    if($countbl['tongbl']>0){
+                                    echo '
+                                    <tr>
                                     <th scope="row">1</th>
-                                    <td>Tên sp</td>
-                                    <td>số bl</td>
-                                    <td>ngày</td>
-                                    <td>ngày</td>
+                                    <td>'.$tensp["ten_sp"].'</td>
+                                    <td>'.$countbl['tongbl'].'</td>
+                                    <td>'.$oldbl['maxbl'].'</td>
+                                    <td>'.$newbl['minbl'].'</td>
                                     <td><a href="index.php?act=chitietbl" class="btn btn-success text-white">Xem
                                             chi tiết</a></td>
-                                </tr>
-                            </tbody>
+                                </tr>';}
+                                }
+                                ?>
+                                </tbody>
                         </table>
                     </div>
                 </div>

@@ -143,11 +143,12 @@ if (isset($_GET['act'])) {
             include "taikhoan/list.php";
             break;
         case 'dsbl':
-            $listbinhluan = loadall_binhluan(0);
+            $listsp = loadall_sanpham("", 0);
             include "binhluan/list.php";
             break;
         case 'chitietbl':
             $listbinhluan = loadall_binhluan(0);
+            $listsp = loadall_sanpham("", 0);
             include "binhluan/chitietbinhluan.php";
             break;
         case 'xoabl':
