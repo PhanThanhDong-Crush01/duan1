@@ -45,7 +45,7 @@
                                     <td>'.$countbl['tongbl'].'</td>
                                     <td>'.$oldbl['maxbl'].'</td>
                                     <td>'.$newbl['minbl'].'</td>
-                                    <td><a href="index.php?act=chitietbl" class="btn btn-success text-white">Xem
+                                    <td><a href="index.php?act=chitietbl&masp='.$idpro.'" class="btn btn-success text-white">Xem
                                             chi tiết</a></td>
                                 </tr>';}
                                 }

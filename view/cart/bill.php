@@ -2,8 +2,8 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Bill</span></p>
-                    <h1 class="mb-0 bread">Bill</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ</a></span> <span>Hóa đơn</span></p>
+                    <h1 class="mb-0 bread">Hóa đơn</h1>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                                         <td><input type=" text" name="dia_chi" value="<?= $address ?>" class="form-control"></td>
                                         <td><input type="text" name="email" value="<?= $email ?>" class="form-control"></td>
                                         <td><input type="text" name="sdt" value="<?= $tel ?>" class="form-control"></td>
-                                        <td><input type="text" name="tong" value="<?= $tel ?>" class="form-control"></td>
+                                        <td><input type="text" name="tong" value="<?= $tongdonhang ?>.000 VNĐ" class="form-control"></td>
                                         <td>
                                             <input type="radio" name="pttt" id="btn1" checked value="0">Trả tiền khi nhận hàng <br>
                                             <input type="radio" name="pttt" id="btn2" value="1">Thanh toán online
@@ -68,11 +68,6 @@
 
                 </div>
 
-                <div class="cart-list">
-                    <table class="table">
-                        <?php viewcart(0) ?>
-                    </table>
-                </div>
                 <div class="bill">
                     <input type="submit" value="ĐỒNG Ý ĐẶT HÀNG" name="dongydathang" class="btn btn-primary py-3 px-4">
                 </div>

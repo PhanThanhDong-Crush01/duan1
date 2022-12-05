@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Shop</span></p>
-                <h1 class="mb-0 bread">Shop</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ</a></span> <span>Cửa hàng</span></p>
+                <h1 class="mb-0 bread">Cửa hàng</h1>
             </div>
         </div>
     </div>
@@ -62,9 +62,9 @@ $spnew  = pdo_query($sql);
 	                            <p class="price"><span style="color: red;">' . $don_gia . '.000 VNĐ</span></p>
 	                        </div>
 	                        <p class="bottom-area d-flex px-3">
-	                            <a href="' . $linksp . '" class="add-to-cart text-center py-2 mr-1"><span>Add to cart<i class="ion-ios-add ml-1"></i>
+	                            <a href="' . $linksp . '" class="add-to-cart text-center py-2 mr-1"><span>Thêm giỏ hàng<i class="ion-ios-add ml-1"></i>
                                 </span></a>
-	                            <a href="' . $linksp . '" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+	                            <a href="' . $linksp . '" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
 	                        </p>
 	                    </div>
 	                </div> 
@@ -107,7 +107,7 @@ $spnew  = pdo_query($sql);
             <div class="col-md-4 col-lg-2">
                 <div class="sidebar">
                     <div class="sidebar-box-2">
-                        <h2 class="heading">Categories</h2>
+                        <h2 class="heading">Loại</h2>
                         <div class="fancy-collapse-panel">
                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                 <?php
@@ -133,12 +133,12 @@ $spnew  = pdo_query($sql);
 
                     <!-- start PRICE RANGE -->
                     <div class="sidebar-box-2">
-                        <h2 class="heading">Price Range</h2>
+                        <h2 class="heading">Lọc giá</h2>
                         <form method="post" class="colorlib-form-2">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="guests">Price from:</label>
+                                        <label for="guests">Từ:</label>
                                         <div class="form-field">
                                             <i class="icon icon-arrow-down3"></i>
                                             <select name="people" id="people" class="form-control">
@@ -153,7 +153,7 @@ $spnew  = pdo_query($sql);
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="guests">Price to:</label>
+                                        <label for="guests">Đến:</label>
                                         <div class="form-field">
                                             <i class="icon icon-arrow-down3"></i>
                                             <select name="people" id="people" class="form-control">

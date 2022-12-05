@@ -29,12 +29,12 @@
                             </thead>
                             <tbody>
                                 <?php
-                                foreach ($listtaikhoan as $taikhoan) {
+                                foreach ($listtaikhoanadmin as $taikhoan) {
                                     extract($taikhoan);
 
                                     $hinhpath = "../upload/" . $hinh;
                                     if (is_file($hinhpath)) {
-                                        $hinh = "<img src='" . $hinhpath . "' width='150'>";
+                                        $hinh = "<img src='" . $hinhpath . "' width='50'>";
                                     } else {
                                         $hinh = "no photo";
                                     }
@@ -78,17 +78,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>khách hàng</td>
-                                    <td><a href="" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
+                            <?php
+                                foreach ($list_kh as $valuetk) {
+                                    extract($valuetk);
+
+                                    $hinhpath = "../upload/" . $hinh;
+                                    if (is_file($hinhpath)) {
+                                        $hinh = "<img src='" . $hinhpath . "' width='50'>";
+                                    } else {
+                                        $hinh = "no photo";
+                                    }
+
+                                    $xoatk = "index.php?act=xoatk&ma_kh=" . $ma_kh;
+                                    echo '<tr>
+                                    <th scope="row">' . $ma_kh . '</th>
+                                    <td>' . $ho_ten . '</td>
+                                    <td>' . $hinh . '</td>
+                                    <td>' . $email . '</td>
+                                    <td>' . $dia_chi . '</td>
+                                    <td>' . $sdt . '</td>
+                                    <td>Khách hàng</td>
+                                    <td><a href="' . $xoatk . '" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
                                     </td>
-                                </tr>
+                                </tr>';
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>

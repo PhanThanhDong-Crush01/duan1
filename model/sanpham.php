@@ -1,11 +1,16 @@
 <?php
-function insert_sanpham($tensp,$giasp,$hinh,$mota,$iddm){
-    $sql="insert into san_pham(ten_sp,don_gia,hinh,mo_ta,ma_loai) values('$tensp','$giasp','$hinh','$mota','$iddm')";
+function insert_sanpham($tensp,$giasp,$ngaynhap,$hinh,$mota,$iddm){
+    $sql="insert into san_pham(ten_sp,don_gia,ngay_nhap,hinh,mo_ta,ma_loai) values('$tensp','$giasp','$ngaynhap','$hinh','$mota','$iddm')";
     pdo_execute($sql);
+
 }
 function delete_sanpham($id){
     $sql="delete from san_pham where ma_sp=".$id;
     pdo_query($sql);
+    $sql0="delete from mau_size where idsp=".$id;
+    pdo_query($sql0);
+    $sql1="delete from binh_luan where idpro=".$id;
+    pdo_query($sql1);
 }
 function loadall_sanpham_home(){
     $sql="select * from san_pham where 1 order by ma_sp desc limit 0,8";

@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="../index.php">Home</a></span> <span>Shop</span></p>
-                <h1 class="mb-0 bread">Shop</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="../index.php">Home</a></span> <span>Cửa hàng</span></p>
+                <h1 class="mb-0 bread">Cửa hàng</h1>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mb-5 ftco-animate">
-                <a href="<?= $img ?>" class="image-popup prod-img-bg"><img src="<?= $img ?>" class="img-fluid" alt="Colorlib Template"></a>
+                <a href="<?= $img ?>" class="image-popup prod-img-bg"><img src="<?= $img ?>" class="img-fluid" alt="Colorlib Template" width="100%"></a>
             </div>
             <div class="col-lg-6 product-details pl-md-5 ftco-animate">
                 <h3><?= $ten_sp ?></h3>
@@ -37,43 +37,45 @@
                 <p class="price"><span style="color: red;"><?= $don_gia ?>.000 VNĐ</span></p>
                 <p><?= $mo_ta ?></p>
                 </p>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="form-group d-flex">
-                            <div class="select-wrap">
-                                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                <select name="mau_size" id="mau_size" class="form-control" onchange="so_luong_theo_mau_size()">
-                                    <?php foreach($list_mau_size as $mz): ?>
-                                        <option value="<?= $mz["mau_size"]?>"><?= $mz["mau_size"]?></option>
-                                    <?php endforeach ?>
-                                </select>
+                <form action="index.php?act=addtocart&ma_sp=<?= $ma_sp ?>" method="post">
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="form-group d-flex">
+                                <div class="select-wrap">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="mau_size" id="mau_size" class="form-control" >
+                                        <?php foreach($list_mau_size as $mz): ?>
+                                            <option value="<?= $mz["mau_size"]?>"><?= $mz["mau_size"]?></option>
+                                        <?php endforeach ?>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                    </div> 
-                    <h1 id="so_luong_sp"></h1>
-                    <div class="w-100"></div>
-                    <div class="input-group col-md-6 d-flex mb-3">
-	             	<span class="input-group-btn mr-2">
-	                	<button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="" onclick="quantity_left_minus()">
-	                   <i class="ion-ios-remove"></i>
-	                	</button>
-	            		</span>
-	             	<input type="text" id="quantity" name="quantity" class="quantity form-control input-number" value="1">
-	             	<span class="input-group-btn ml-2">
-	                	<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="" onclick="quantity_right_plus()">
-	                     <i class="ion-ios-add"></i>
-	                 </button>
-	             	</span>
-	          	</div>
-                    <div class="w-100"></div>
-                    <div class="col-md-12">
-                        <p style="color: #000;"></p>
+                        </div> 
+                        <h1 id="so_luong_sp"></h1>
+                        <div class="w-100"></div>
+                        <div class="input-group col-md-6 d-flex mb-3">
+                        <span class="input-group-btn mr-2">
+                            <button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="" onclick="quantity_left_minus()">
+                        <i class="ion-ios-remove"></i>
+                            </button>
+                            </span>
+                        <input type="text" id="quantity" name="quantity" class="quantity form-control input-number" value="1">
+                        <span class="input-group-btn ml-2">
+                            <button type="button" class="quantity-right-plus btn" data-type="plus" data-field="" onclick="quantity_right_plus()">
+                            <i class="ion-ios-add"></i>
+                        </button>
+                        </span>
                     </div>
-                </div>
-                <p>
-                    <a href="index.php?act=addtocart&ma_sp=<?= $ma_sp ?>" class="btn btn-black py-3 px-5 mr-2">Add to Cart</a>
-                    <a href="index.php?act=addtocart&ma_sp=<?= $ma_sp ?>" class="btn btn-primary py-3 px-5">Buy now</a>
-                </p>
+                        <div class="w-100"></div>
+                        <div class="col-md-12">
+                            <p style="color: #000;"></p>
+                        </div>
+                    </div>
+                    <p>
+                        <input type="submit" value="Thêm giỏ hàng" class="btn btn-black py-3 px-5 mr-2">
+                        <input type="submit" value="Mua ngay" class="btn btn-primary py-3 px-5">
+                    </p>
+                </form>
             </div>
         </div>
 
@@ -112,7 +114,7 @@
                     <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
                         <div class="row p-4">
                             <div class="col-md-7">
-                                <h3 class="mb-4">23 Reviews</h3>
+                                <h3 class="mb-4">Bình luận</h3>
                                 <?php
                                 foreach ($dsbl as $bl) {
                                     extract($bl);
@@ -153,7 +155,7 @@
                                     $noi_dung = $_POST['noi_dung'];
                                     $idpro = $_POST['idpro'];
                                     $iduser = $_SESSION['user']['ma_kh'];
-                                    $ngay_bl = date('d/m/Y');
+                                    $ngay_bl = date("Y/m/d");
                                     insert_binhluan($noi_dung, $iduser, $idpro, $ngay_bl);
                                 }
                                 ?>
@@ -162,7 +164,7 @@
                             <!-- đánh giá sao -->
                             <div class="col-md-4">
                                 <div class="rating-wrap">
-                                    <h3 class="mb-4">Give a Review</h3>
+                                    <h3 class="mb-4">Đánh giá</h3>
                                     <p class="star">
                                         <span>
                                             <i class="ion-ios-star-outline"></i>
@@ -229,11 +231,11 @@
 </section>
 
 <script>
-        function so_luong_theo_mau_size(){
-            const mau_size = document.querySelector("#mau_size").value;
-            const so_luong = document.querySelector("#so_luong_sp");
-            so_luong.innerHTML = mau_size;
-        }
+        // function so_luong_theo_mau_size(){
+        //     const mau_size = document.querySelector("#mau_size").value;
+        //     const so_luong = document.querySelector("#so_luong_sp");
+        //     so_luong.innerHTML = mau_size;
+        // }
         
 		const quantity = document.querySelector(".quantity");
 

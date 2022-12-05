@@ -1,3 +1,4 @@
+<div class="page-wrapper">
 <div class="row">
     <div class="row frmtitle"><h1>THỐNG KÊ SẢN PHẨM THEO LOẠI</h1></div>
         <div class="row frmcontent">

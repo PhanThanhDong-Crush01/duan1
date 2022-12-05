@@ -15,12 +15,12 @@
                 <div class="w-100"></div>
                 <div class="col-md-3 d-flex">
                     <div class="info bg-white p-4">
-                        <p><span>Address:</span> Nam Từ Liêm - Hà Nội</p>
+                        <p><span>Địa chỉ: <br></span> Nam Từ Liêm - Hà Nội</p>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="info bg-white p-4">
-                        <p><span>Phone:</span> <a href="tel://1234567920">+ 84 086 878 5365</a></p>
+                        <p><span>Điện thoại:</span><br> <a href="tel://1234567920">+ 84 086 878 5365</a></p>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="info bg-white p-4">
-                        <p><span>Website</span> <a href="#">chicorteam6.com</a></p>
+                        <p><span>Website</span> <br><a href="#">chicorteam6.com</a></p>
                     </div>
                 </div>
             </div>
@@ -38,19 +38,19 @@
                 <div class="col-md-6 order-md-last d-flex">
                     <form action="#" class="bg-white p-5 contact-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" name="name">
+                            <input type="text" class="form-control" placeholder="Họ tên" name="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" name="email">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Title" name="title">
+                            <input type="text" class="form-control" placeholder="Tiêu đề" name="title">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message" name="mess"></textarea>
+                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Nội dung" name="mess"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                            <input type="submit" value="Gửi liên hệ" class="btn btn-primary py-3 px-5">
                         </div>
                     </form>
 
@@ -66,8 +66,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 heading-section text-center mb-4 ftco-animate">
-                    <h2 class="mb-4">Follow Us On Instagram</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                    <h2 class="mb-4">Theo dõi Page Facebook</h2>
+                    <p>Theo dõi page facebook củashop để nhận thông báo về sản phẩm mới ra</p>
                 </div>
             </div>
         </div>

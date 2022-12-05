@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-                <h1 class="mb-0 bread">About Us</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Trang chủ</a></span> <span>Giới thiệu</span></p>
+                <h1 class="mb-0 bread">Giới thiệu</h1>
             </div>
         </div>
     </div>
@@ -18,8 +18,8 @@
                         <span class="flaticon-bag"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Free Shipping</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <h3 class="heading">Free Ship</h3>
+                        <p>Đăng kí tài khoản và đặt hàng để hưởng ưu đãi free ship mọi nơi trên toàn quốc</p>
                     </div>
                 </div>
             </div>
@@ -29,8 +29,8 @@
                         <span class="flaticon-customer-service"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Support Customer</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <h3 class="heading">Hỗ trợ kịp thời</h3>
+                        <p>Shop luôn sẵn sàng hỗ trợ kịp thời khi bạn có thắc mắc</p>
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                         <span class="flaticon-payment-security"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Secure Payments</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <h3 class="heading">Thanh toán an toàn</h3>
+                        <p>Thanh toán khi nhận hàng và quét mã QR</p>
                     </div>
                 </div>
             </div>
@@ -60,13 +60,13 @@
             <div class="col-md-7 py-md-5 wrap-about pb-md-5 ftco-animate">
                 <div class="heading-section-bold mb-4 mt-md-5">
                     <div class="ml-md-0">
-                        <h2 class="mb-4">Stablished Sinced 1975</h2>
+                        <h2 class="mb-4">Shop được thành lập từ năm 2022</h2>
                     </div>
                 </div>
                 <div class="pb-md-5 pb-4">
-                    <p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-                    <p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her.</p>
-                    <p><a href="#" class="btn btn-primary">Shop now</a></p>
+                    <p>Tuy mới thành lập không lấu nhưng shop được tích hợp những công nghệ tân tiến hiện nay trong công nghệ thông tin.</p>
+                    <p>Với mong muốn được đồng hành, truyền cảm hứng và khuyến khích các bạn nam giới trẻ dám bước ra khỏi vùng an toàn để tự do, tự tin thể hiện chính mình theo phong cách phù hợp với bản thân. Thương hiệu thời trang Chicor đầu tư tâm huyết nghiên cứu thiết kế chi tiết từng sản phẩm để có thể mang lại những trải nghiệm mới cho khách hàng, cũng là thông điệp muốn nhắn nhủ đến các bạn trẻ hãy cho bản thân trải nghiệm, dám thay đổi, bứt phá để vươn lên. Chúng ta chỉ thực sự thay đổi khi chúng ta hành động. 360 tin rằng dù có thể thành công hay thất bại, nhưng chắc chắn chỉ có những trải nghiệm mới giúp bạn trưởng thành. Trưởng thành là một hành trình với những dấu mốc thanh xuân, để khi nhìn lại tôi và bạn có thể tự tin không phải nuối tiếc “giá như…”</p>
+                    <p><a href="#" class="btn btn-primary">Vào cửa hàng ngay</a></p>
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@
                         </div>
                         <div class="text">
                             <h3>Free Shipping</h3>
-                            <p class="mb-0">Separated they live in. A small river named Duden flows</p>
+                            <p class="mb-0">Đăng kí tài khoản và đặt hàng để hưởng ưu đãi free ship mọi nơi trên toàn quốc</p>
                         </div>
                     </div>
                     <div class="services-2 p-4 d-flex ftco-animate">
@@ -92,8 +92,8 @@
                             <span class="flaticon-heart-box"></span>
                         </div>
                         <div class="text">
-                            <h3>Valuable Gifts</h3>
-                            <p class="mb-0">Separated they live in. A small river named Duden flows</p>
+                            <h3>Quà tặng giá trị</h3>
+                            <p class="mb-0">Shop luôn luôn tri ân khách hàng VIP của shop</p>
                         </div>
                     </div>
                     <div class="services-2 p-4 d-flex ftco-animate">
@@ -101,8 +101,8 @@
                             <span class="flaticon-payment-security"></span>
                         </div>
                         <div class="text">
-                            <h3>All Day Support</h3>
-                            <p class="mb-0">Separated they live in. A small river named Duden flows</p>
+                            <h3>Hỗ trợ cả ngày</h3>
+                            <p class="mb-0">Shop luôn sẵn sàng hỗ trợ kịp thời khi bạn có thắc mắc</p>
                         </div>
                     </div>
                     <div class="services-2 p-4 d-flex ftco-animate">
@@ -110,16 +110,16 @@
                             <span class="flaticon-customer-service"></span>
                         </div>
                         <div class="text">
-                            <h3>All Day Support</h3>
-                            <p class="mb-0">Separated they live in. A small river named Duden flows</p>
+                            <h3>Hỗ trợ cả ngày</h3>
+                            <p class="mb-0">Shop luôn sẵn sàng hỗ trợ kịp thời khi bạn có thắc mắc</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-7">
                 <div class="heading-section ftco-animate mb-5">
-                    <h2 class="mb-4">Our satisfied customer says</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                    <h2 class="mb-4">Khách hàng hài lòng của chúng tôi nói</h2>
+                    <p>Có ng nói về cái này thì có lẽ là một người mẫu này anh em tinh tế mình thấy nó cũng là người nhà mình đi học thêm đi rồi biết nó là một người mẫu này anh em tinh tế mình thấy nó cũng là người nhà mình đi học</p>
                 </div>
                 <div class="carousel-testimony owl-carousel ftco-animate">
                     <div class="item">
@@ -130,9 +130,9 @@
                                 </span>
                             </div>
                             <div class="text">
-                                <p class="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4 pl-4 line">Có ng nói về cái này thì có lẽ là một người mẫu này anh em tinh tế mình thấy nó cũng là người nhà mình đi học thêm đi rồi biết nó là một người mẫu này anh em tinh tế mình thấy nó cũng là người nhà mình đi học</p>
                                 <p class="name">Garreth Smith</p>
-                                <span class="position">Marketing Manager</span>
+                                <span class="position">Khách hàng thân thiết của shop</span>
                             </div>
                         </div>
                     </div>
@@ -144,51 +144,9 @@
                                 </span>
                             </div>
                             <div class="text">
-                                <p class="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4 pl-4 line">Có ng nói về cái này thì có lẽ là một người mẫu này anh em tinh tế mình thấy nó cũng là người nhà mình đi học thêm đi rồi biết nó là một người mẫu này anh em tinh tế mình thấy nó cũng là người nhà mình đi học</p>
                                 <p class="name">Garreth Smith</p>
-                                <span class="position">Interface Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap">
-                            <div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_3.jpg)">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text">
-                                <p class="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Garreth Smith</p>
-                                <span class="position">UI Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap">
-                            <div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_1.jpg)">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text">
-                                <p class="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Garreth Smith</p>
-                                <span class="position">Web Developer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap">
-                            <div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_1.jpg)">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text">
-                                <p class="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Garreth Smith</p>
-                                <span class="position">System Analyst</span>
+                                <span class="position">Nhà thiết kế thời trang</span>
                             </div>
                         </div>
                     </div>
@@ -202,8 +160,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 heading-section text-center mb-4 ftco-animate">
-                <h2 class="mb-4">Follow Us On Instagram</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                <h2 class="mb-4">Theo dõi Page Facebook</h2>
+                <p>Theo dõi page facebook củashop để nhận thông báo về sản phẩm mới ra</p>
             </div>
         </div>
     </div>

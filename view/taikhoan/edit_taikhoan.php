@@ -21,7 +21,7 @@
                     <div class="col-lg-4 col-xlg-3">
                         <div class="card">
                             <div class="card-body">
-                                <center class="mt-4"> <img src="/web2041/upload/<?= $hinh?>" class="rounded-circle" width="100" />
+                                <center class="mt-4"> <img src="/web2041-3/upload/<?= $hinh?>" class="rounded-circle" width="100" />
                                     <h4 class="card-title mt-2"><?= $ho_ten ?></h4>
                                     <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
                                     <div class="row text-center justify-content-md-center">
@@ -52,11 +52,17 @@
                     <div class="col-lg-8 col-xlg-9">
                         <div class="card">
                             <div class="card-body">
-                                <form action="index.php?act=edit_taikhoan_fun" method="post" class="form-horizontal form-material mx-2">
+                                <form action="index.php?act=edit_taikhoan_fun" method="post" class="form-horizontal form-material mx-2" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label class="col-md-12">Full Name</label>
+                                        <label class="col-md-12">Họ tên</label>
                                         <div class="col-md-12">
                                             <input type="text" class="form-control form-control-line" name="user" value="<?= $ho_ten ?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-email" class="col-md-12">Ảnh</label>
+                                        <div class="col-md-12">
+                                            <input type="file" class="form-control form-control-line" name="hinh">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -66,19 +72,19 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Password</label>
+                                        <label class="col-md-12">Mật khẩu</label>
                                         <div class="col-md-12">
                                             <input type="password" value="password" class="form-control form-control-line" name="pass" value="<?= $mat_khau ?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Phone No</label>
+                                        <label class="col-md-12">Điện thoại</label>
                                         <div class="col-md-12">
                                             <input type="text" class="form-control form-control-line" name="sdt" value="<?= $sdt ?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Address</label>
+                                        <label class="col-md-12">Địa chỉ</label>
                                         <div class="col-md-12">
                                             <input type="text" class="form-control form-control-line" name="dc" value="<?= $dia_chi ?>">
                                         </div>

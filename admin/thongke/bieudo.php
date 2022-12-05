@@ -1,3 +1,4 @@
+<div class="page-wrapper">
 <div class="row">
     <div
     id="myChart" style="width:100%; max-width:600px; height:500px;">

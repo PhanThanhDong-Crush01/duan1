@@ -6,6 +6,7 @@ if ($_SESSION == null ) {
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/mau_size.php";
 include "../model/taikhoan.php";
 include "../model/binhluan.php";
 include "../model/cart.php";
@@ -59,11 +60,26 @@ if (isset($_GET['act'])) {
             if (isset($_POST['themmoi'])) {
                 $iddm = $_POST['ma_loai'];
                 $tensp = $_POST['tensp'];
+                $ngaynhap = $_POST['ngay_nhap'];
                 $giasp = $_POST['don_gia'];
                 $mota = $_POST['mo_ta'];
                 $filename = $_FILES['hinh']['name'];
+
                 $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+
+                $mau_size1 = $_POST["mausize1"];
+                $soluong1 = $_POST["sl1"];
+
+                $mau_size2 = $_POST["mausize2"];
+                $soluong2 = $_POST["sl2"];
+
+                $mau_size3 = $_POST["mausize3"];
+                $soluong3 = $_POST["sl3"];
+
+                $mau_size4 = $_POST["mausize4"];
+                $soluong4 = $_POST["sl4"];
+
                 if ($tensp == '' || $giasp == '' || $mota == '' || $filename == '') {
                     $thongbao = "Không Để Trống dữ liệu !";
                 } else if ($giasp < 0) {
@@ -74,9 +90,13 @@ if (isset($_GET['act'])) {
                     } else {
                         //echo "Sorry, there was an error uploading your file.";
                     }
-                    insert_sanpham($tensp, $giasp, $filename, $mota, $iddm);
+                    insert_sanpham($tensp, $giasp,$ngaynhap, $filename, $mota, $iddm);
+                    $sql = "SELECT Max(ma_sp) as 'masp' FROM `san_pham` " ;
+                    $idsp = pdo_query_one($sql);
+                    insert_mausize($idsp['masp'],$mau_size1,$soluong1,$mau_size2,$soluong2,$mau_size3,$soluong3,$mau_size4,$soluong4);
                     $thongbao = "Thêm thành công";
                 }
+                
             }
             $kyw = '';
                 $iddm = 0;
@@ -98,6 +118,7 @@ if (isset($_GET['act'])) {
         case 'xoasp':
             if (isset($_GET['ma_sp']) && ($_GET['ma_sp'] > 0)) {
                 delete_sanpham($_GET['ma_sp']);
+                
             }
             $listsanpham = loadall_sanpham("", 0);
             include "sanpham/list.php";
@@ -106,6 +127,7 @@ if (isset($_GET['act'])) {
             if (isset($_GET['ma_sp']) && ($_GET['ma_sp'] > 0)) {
                 $sanpham = loadone_sanpham($_GET['ma_sp']);
             }
+            $mau_size = loadall_mau_size($_GET['ma_sp']);
             $listdanhmuc = loadall_danhmuc();
             include "sanpham/update.php";
             break;
@@ -132,14 +154,16 @@ if (isset($_GET['act'])) {
             include "sanpham/list.php";
             break;
         case 'dskh':
-            $listtaikhoan = loadall_taikhoan("", 0);
+            $listtaikhoanadmin = loadall_taikhoan(1);
+            $list_kh = loadall_taikhoan($vaitro = 0);
             include "taikhoan/list.php";
             break;
         case 'xoatk':
             if (isset($_GET['ma_kh']) && ($_GET['ma_kh'] > 0)) {
                 delete_taikhoan($_GET['ma_kh']);
             }
-            $listtaikhoan = loadall_taikhoan("", 0);
+            $listtaikhoanadmin = loadall_taikhoan(1);
+            $list_kh = loadall_taikhoan(0);
             include "taikhoan/list.php";
             break;
         case 'dsbl':
@@ -147,7 +171,8 @@ if (isset($_GET['act'])) {
             include "binhluan/list.php";
             break;
         case 'chitietbl':
-            $listbinhluan = loadall_binhluan(0);
+            $idpro = $_GET['masp'];
+            $listbinhluan = loadall_binhluan($idpro);
             $listsp = loadall_sanpham("", 0);
             include "binhluan/chitietbinhluan.php";
             break;
@@ -185,12 +210,6 @@ if (isset($_GET['act'])) {
             break;
         case 'lienhe':
             include "lienhe/listlienhe.php";
-            break;
-        case 'banner':
-            include "banner/banner.php";
-            break;
-        case 'addbanner':
-            include "banner/banner.php";
             break;
         default:
             include "home.php";

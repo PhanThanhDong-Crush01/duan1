@@ -40,9 +40,6 @@
                                     $sql = "SELECT ho_ten FROM `khach_hang` WHERE ma_kh = '$iduser';";
                                     $ho_ten_kh = pdo_query($sql);
 
-                                    $sql2 = "SELECT sp.ten_sp FROM `binh_luan` bl INNER JOIN `san_pham` sp on bl.idpro = sp.ma_sp WHERE bl.idpro = '$idpro';";
-                                    $ten_sp = pdo_query($sql2);
-
                                     $xoabl = "index.php?act=xoabl&ma_bl=" . $ma_bl;
 
 

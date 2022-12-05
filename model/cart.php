@@ -9,13 +9,12 @@ function viewcart($del)
             <tr class="text-center">
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Amount</th>
-                <th>Color</th>
-                <th>Size</th>
-                <th>Total</th>
-                <th>Action</th>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Loại</th>
+                <th>Tiền</th>
+                <th>Hành động</th>
             </tr>
         </thead>
         <tbody>';
@@ -24,7 +23,7 @@ function viewcart($del)
         $ttien = $cart[3] * $cart[4];
         $tong += $ttien;
         if ($del == 1) {
-            $xoasp_td = '<a href="index.php?act=delcart&idcart=' . $i . '"><input type="button" value="Xóa"></a>';
+            $xoasp_td = '<a href="index.php?act=delcart&idcart=' . $i . '"><input type="button" value="Xóa" style="background: red; color: white;"></a>';
         } else {
             $xoasp_td = '';
         }
@@ -39,15 +38,13 @@ function viewcart($del)
                     <h3>' . $cart[1] . '</h3>
                 </td>
 
-                <td class="price">' . $cart[3] . '</td>
+                <td class="price" style="color: red">' . $cart[3] . '.000 VNĐ</td>
 
                 <td class="quantity">' . $cart[4] . '</td>
 
-                <td class="quantity">Đen</td>
+                <td class="quantity">' . $cart[5] . '</td>
 
-                <td class="quantity">M</td>
-
-                <td class="quantity">' . $ttien . '</td>
+                <td class="quantity" style="color: red">' . $ttien . '.000 VNĐ</td>
 
                 <td class="quantity">' . $xoasp_td . '</td>
             </tr>
@@ -56,10 +53,12 @@ function viewcart($del)
     }
     echo '<tr>
             <td colspan="4">Tổng đơn hàng</td>
-            <td><input type="text" name="tong" value="' . $tong . '" readonly style="border: 1px solid white;"></td>
+            <td><input type="text" name="tong" value="' . $tong . '.000 VNĐ" readonly style="border: 1px solid white;" style="color: red"></td>
         </tr>
     </tbody>';
 }
+
+
 function bill_chi_tiet($billct)
 {
     global $img_path;
@@ -90,7 +89,6 @@ function bill_chi_tiet($billct)
                     <td>' . $san_pham['don_gia'] . '</td>
                     <td>' . $cart['so_luong'] . '</td>
                     <td>' . $cart['mau'] . '</td>
-                    <td>' . $cart['size'] . '</td>
                     <td>' . $cart['tien'] . '</td>
                 </tr>';
         $i += 1;
@@ -110,9 +108,9 @@ function tongdonhang()
     }
     return $tong;
 }
-function insert_hoa_don_chi_tiet($ma_hd, $idpro, $soluong, $mau, $size, $thanhtien)
+function insert_hoa_don_chi_tiet($ma_hd, $idpro, $soluong, $mau_size, $thanhtien)
 {
-    $sql = "INSERT INTO `hoa_don_chi_tiet` (`ma_hdct`, `ma_hd`, `ma_sp`, `so_luong`, `mau`, `size`, `tien`) VALUES (NULL, '$ma_hd', '$idpro', '$soluong', '$mau', '$size', '$thanhtien');";
+    $sql = "INSERT INTO `hoa_don_chi_tiet` (`ma_hdct`, `ma_hd`, `ma_sp`, `so_luong`, `mau_size`, `tien`) VALUES (NULL, '$ma_hd', '$idpro', '$soluong', '$mau_size', '$thanhtien');";
     return pdo_execute($sql);
 }
 function insert_hoa_don($ma_kh, $ma_vc, $ngaydathang, $address, $tel, $tongdonhang, $pttt)

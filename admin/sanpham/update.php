@@ -22,7 +22,6 @@ if (is_file($hinhpath)) {
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Thêm Sản Phẩm</h4>
                     </div>
                     <div class="table-responsive">
                         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data" style="width: 50%; margin: 0 auto;">
@@ -42,7 +41,7 @@ if (is_file($hinhpath)) {
                             <div class="form-group">
                                 <label class="col-md-12">Đơn giá</label>
                                 <div class="col-md-12">
-                                    <input type="number" class="form-control form-control-line" value="<?= $don_gia ?>" name="don_gia">
+                                    <input type="number" class="form-control form-control-line" value="<?= $don_gia ?>" name="giasp">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -58,21 +57,9 @@ if (is_file($hinhpath)) {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Màu</label>
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-line" name="mau">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Size</label>
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-line" name="size">
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label class="col-md-12">Mô tả</label>
                                 <div class="col-md-12">
-                                    <textarea rows="5" class="form-control form-control-line" name="mo_ta"><?= $mo_ta ?></textarea>
+                                    <textarea rows="5" class="form-control form-control-line" name="mota"><?= $mo_ta ?></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -96,6 +83,17 @@ if (is_file($hinhpath)) {
                                     </select>
                                 </div>
                             </div>
+                            <br>
+                            <div class="form-group">
+                                <label class="col-md-12">Màu Size</label>
+                            <?php foreach($mau_size as $ms): ?>
+                                <div class="col-md-12" style="display: flex; width: 50%;">
+                                    <input type="text" class="form-control form-control-line" name="mausize" value="<?= $ms['mau_size']?>">
+                                    <input type="number" class="form-control form-control-line" name="sl" value="<?= $ms['so_luong']?>">
+                                </div>
+                            <?php endforeach?>
+                            </div>
+
                             <div class="form-group">
                                 <input type="hidden" name="id" value="<?= $ma_sp ?>">
                                 <div class="col-sm-12">

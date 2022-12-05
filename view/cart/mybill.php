@@ -2,8 +2,8 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>My Bill</span></p>
-                    <h1 class="mb-0 bread">My Bill</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ</a></span> <span>Hóa đơn</span></p>
+                    <h1 class="mb-0 bread">Lịch sử mua hàng</h1>
                 </div>
             </div>
         </div>
@@ -33,10 +33,11 @@
                             <td>' . $bill['ma_hd'] . '</td>
                             <td>' . $bill['ngay_dat'] . '</td>
                             <td>' . $countsp . '</td>
-                            <td>' . $bill['tong_tien'] . '</td>
+                            <td style="color: red;">' . $bill['tong_tien'] . '.000 VNĐ</td>
                             <td>' . $ttdh . '</td>
                             <td><div class="bill">
-                            <input type="submit" value="HỦY ĐẶT HÀNG" name="dongydathang" class="btn btn-primary py-3 px-4">
+                            <a href="index.php?act=chitietdonhangview&mahd=' . $bill['ma_hd'] . '"><input type="submit" value="Chi tiết đơn hàng" name="chitietdathang" class="btn btn-primary py-3 px-4" style="background: green;"></a>
+                            <a href=""><input type="submit" value="HỦY ĐẶT HÀNG" name="huydathang" class="btn btn-primary py-3 px-4" style="background: red;"></a>
                         </div>
                         </td>
                         </tr>';

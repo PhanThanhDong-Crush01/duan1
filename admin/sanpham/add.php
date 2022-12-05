@@ -1,8 +1,4 @@
-<?php
-if (is_array($sanpham)) {
-    extract($sanpham);
-}
-?>
+
 <div class="page-wrapper">
     <div class="page-breadcrumb">
         <div class="row">
@@ -51,19 +47,6 @@ if (is_array($sanpham)) {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Màu size</label>
-                                <div class="col-md-12">
-                                    <input type="text" hidden name="idpr" value="">
-                                    <input type="text" class="form-control form-control-line" name="mau">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Số lượng</label>
-                                <div class="col-md-12">
-                                    <input type="number" class="form-control form-control-line" name="size">
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label class="col-md-12">Mô tả</label>
                                 <div class="col-md-12">
                                     <textarea rows="5" class="form-control form-control-line" name="mo_ta"></textarea>
@@ -86,6 +69,25 @@ if (is_array($sanpham)) {
                                         }
                                         ?>
                                     </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Màu Size</label>
+                                <div class="col-md-12" style="display: flex; width: 50%;">
+                                    <input type="text" class="form-control form-control-line" name="mausize1" placeholder="Đen - S">
+                                    <input type="number" class="form-control form-control-line" name="sl1" value="" placeholder="số lượng: 5">
+                                </div>
+                                <div class="col-md-12" style="display: flex; width: 50%;">
+                                    <input type="text" class="form-control form-control-line" name="mausize2" placeholder="Đen - M">
+                                    <input type="number" class="form-control form-control-line" name="sl2" value="" placeholder="số lượng: 5">
+                                </div>
+                                <div class="col-md-12" style="display: flex; width: 50%;">
+                                    <input type="text" class="form-control form-control-line" name="mausize3" placeholder="Đen - L">
+                                    <input type="number" class="form-control form-control-line" name="sl3" value="" placeholder="số lượng: 5">
+                                </div>
+                                <div class="col-md-12" style="display: flex; width: 50%;">
+                                    <input type="text" class="form-control form-control-line" name="mausize4" placeholder="Đen - XL">
+                                    <input type="number" class="form-control form-control-line" name="sl4" value="" placeholder="số lượng: 5">
                                 </div>
                             </div>
                             <div class="form-group">

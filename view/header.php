@@ -62,11 +62,11 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php?act=shop">Shop</a></li>
-                    <li class="nav-item"><a href="index.php?act=about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="index.php?act=blog" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="index.php?act=contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item active"><a href="index.php" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?act=shop">Cửa hàng</a></li>
+                    <li class="nav-item"><a href="index.php?act=about" class="nav-link">Giới thiệu</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Bài viết</a></li>
+                    <li class="nav-item"><a href="index.php?act=contact" class="nav-link">Liên hệ</a></li>
                     <!-- <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li> -->
                     <?php
                     if (isset($_SESSION['user'])) {
@@ -74,7 +74,7 @@
                     ?>
                         <li class="nav-item taikhoan"><a class="nav-link">Xin chào, <?= $ho_ten ?></a>
                             <p class="dangxuat">
-                                <a class="nav-link" href="index.php?act=edit_taikhoan">Edit user</a>
+                                <a class="nav-link" href="index.php?act=edit_taikhoan">Cập nhập tài khoản</a>
                                 <a class="nav-link" href="index.php?act=thoat">Đăng xuất</a>
                             </p>
                         </li>
@@ -82,7 +82,7 @@
                             <a class="nav-link"><span class="icon-shopping_cart"></span>[0]</a>
                             <p class="mybillshow">
                                 <a href="index.php?act=viewcart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a>
-                                <a href="index.php?act=mybill" class="nav-link">Mybill</a>
+                                <a href="index.php?act=mybill" class="nav-link">Hóa đơn</a>
                             </p>
                         </li>
                         <?php if ($vai_tro > 0) { ?>

@@ -47,19 +47,19 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             }
             break;
         case 'dangky':
-            
-            if (isset($_POST['dangky']) && ($_POST['dangky'] > 0)) {
                 $email = $_POST['email'];
                 $ho_ten = $_POST['user'];
                 $mat_khau = $_POST['pass'];
-                if ($email == '' || $ho_ten == '' || $mat_khau == '') {
-                    $thongbao = "Đăng ký thất bại. Vui lòng không để trống dữ liệu!";
-                } else {
-                    insert_khachhang($email, $ho_ten, $mat_khau);
-                    $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng!";
+                $dia_chi = $_POST['dc'];
+                $sdt = $_POST['sdt'];
+                $filename = $_FILES['hinh']['name'];
+                if ($_FILES["hinh"]["name"] != null) {
+                    move_uploaded_file($_FILES["hinh"]["tmp_name"], "upload/" . $_FILES['hinh']['name']);
                 }
-            }
-            include "view/taikhoan/dang_ky_view.php";
+                $vaitro = 0;
+                insert_khachhang($vaitro,$email, $ho_ten, $mat_khau, $dia_chi, $sdt, $filename);
+            
+            include "view/taikhoan/dang_nhap_view.php";
             break;
         case 'dangnhap':
             if (isset($_POST['dangnhap'])) {
@@ -78,7 +78,6 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             if (isset($_POST['capnhat']) && ($_POST['capnhat'] > 0)) {
                 $email = $_POST['email'];
                 $ho_ten = $_POST['user'];
-                $mat_khau = $_POST['pass'];
                 $dia_chi = $_POST['dc'];
                 $sdt = $_POST['sdt'];
                 $ma_kh = $_POST['id'];
@@ -88,9 +87,8 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                 } else {
                     //echo "Sorry, there was an error uploading your file.";
                 }
-                update_taikhoan($ma_kh, $email, $ho_ten, $mat_khau, $dia_chi, $sdt, $filename);
+                update_taikhoan($ma_kh, $email, $ho_ten, $dia_chi, $sdt, $filename);
                 $_SESSION['user'] = checkuser($ho_ten, $mat_khau);
-                header('location: index.php?act=edit_taikhoan');
             }
             include "view/taikhoan/edit_taikhoan.php";
             break;
@@ -115,12 +113,13 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
                 $ma_sp = $id;
-                $soluong = 1;
-                $mau = 'đen';
-                $size = 'M';
+                $soluong = $_POST['quantity'];
+                $mau_size = $_POST['mau_size'];
                 $ttien = $soluong * $don_gia;
-                $spadd = [$ma_sp, $ten_sp, $hinh, $don_gia, $soluong, $mau, $size, $ttien];
+                $spadd = [$ma_sp, $ten_sp, $hinh, $don_gia, $soluong, $mau_size, $ttien];
                 array_push($_SESSION['mycart'], $spadd);
+                // echo "<pre>";
+                // var_dump($_SESSION['mycart']);die;
                 include "view/cart/viewcart.php";
             }
             break;
@@ -133,10 +132,10 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             include "view/cart/viewcart.php";
             break;
         case 'viewcart':
-            var_dump($_SESSION["mycart"]);
             include "view/cart/viewcart.php";
             break;
         case 'bill':
+            $tongdonhang = tongdonhang();
             include "view/cart/bill.php";
             break;
         case 'billcomfirm':
@@ -160,7 +159,7 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                 $ma_hd = $ma_hd["ma_hd"];
                 //hoa_don_chi_tiet: ma_hdct	ma_hd	ma_sp	so_luong	mau	size	tien	
                 foreach ($_SESSION['mycart'] as $cart) {
-                    insert_hoa_don_chi_tiet($ma_hd, $cart[0], $cart[4], $cart[5], $cart[6], $cart[7]);
+                    insert_hoa_don_chi_tiet($ma_hd, $cart[0], $cart[4], $cart[5], $cart[6]);
                 }
             }
             $bill = loadone_bill($ma_hd);
@@ -170,6 +169,12 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
         case 'mybill':
             $listbill = loadall_bill($_SESSION['user']['ma_kh']);
             include "view/cart/mybill.php";
+            break;
+        case 'chitietdonhangview':
+            $mahd=$_GET['mahd'];
+            $sql = "SELECT * FROM `hoa_don_chi_tiet` WHERE ma_hd = $mahd;";
+            $hdct = pdo_query($sql); 
+            include "view/cart/chitietdonhang.php";
             break;
         case 'thoat':
             session_unset();
@@ -190,8 +195,6 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
         case 'about':
             include "view/about.php";
             break;
-        case 'blog':
-            include "view/blog.php";
             break;
         case 'contact':
             include "view/contact.php";

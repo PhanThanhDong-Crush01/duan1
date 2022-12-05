@@ -12,7 +12,7 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Chicor Shop</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                    <p>Chicor nơi bạn có thể thỏa sức thử nghiệm phong cách của mình. Được thành lập vào 2020 với rất nhiều những sự biến động của xã hội, Chicor bắt đầu chặng đường viết lên câu chuyện của riêng mình. </p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -89,33 +89,33 @@
     </svg></div>
 
 
-<script src="/duan1
+<script src="/web2041-3
 /view/js/jquery.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/popper.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/bootstrap.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/jquery.easing.1.3.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/jquery.waypoints.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/jquery.stellar.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/owl.carousel.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/jquery.magnific-popup.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/aos.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/jquery.animateNumber.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/bootstrap-datepicker.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/scrollax.min.js"></script>
-<script src="/duan1
+<script src="/web2041-3
 /view/js/main.js"></script>
 
 <!-- <script>

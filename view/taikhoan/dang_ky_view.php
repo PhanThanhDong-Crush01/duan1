@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Đăng
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Trang Chủ</a></span> <span>Đăng
                         Ký</span>
                 </p>
                 <h1 class="mb-0 bread">Đăng Ký</h1>
@@ -16,23 +16,23 @@
         <h1>Sigup</h1>
     </div>
     <div class="container">
-        <form action="index.php?act=dangky" method="post" >
+        <form action="index.php?act=dangky" method="post" enctype="multipart/form-data">
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="row mb-4">
                 <div class="col">
                     <div class="form-outline">
+                        <label class="form-label" for="form6Example1">Tên</label>
                         <input type="text" id="form6Example1" class="form-control" name="user" />
-                        <label class="form-label" for="form6Example1">Name</label>
                     </div>
                     <div class="form-outline">
+                        <label class="form-label" for="form6Example2">Điện thoại</label>
                         <input type="text" id="form6Example2" class="form-control" name="sdt" />
-                        <label class="form-label" for="form6Example2">Phone</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <input type="file" class="form-control" style="font-size: 15px;" id="cover" />
-                        <label class="form-label" for="form6Example2">Image</label>
+                        <label class="form-label" for="form6Example2">Ảnh</label>
+                        <input type="file" class="form-control" style="font-size: 15px;" id="cover" name="hinh" />
                     </div>
                     <div class="form-outline" style="text-align: center;">
                         <img src="https://www.freeiconspng.com/uploads/no-image-icon-13.png" id="coverPreview" alt="" width="100px">
@@ -42,20 +42,20 @@
 
             <!-- Email input -->
             <div class="form-outline mb-4">
-                <input type="email" id="form6Example5" class="form-control" require name="email" />
                 <label class="form-label" for="form6Example5">Email</label>
+                <input type="email" id="form6Example5" class="form-control" require name="email" />
             </div>
 
             <!-- Text input -->
             <div class="form-outline mb-4">
+                <label class="form-label" for="form6Example3">Mật khẩu</label>
                 <input type="password" id="form6Example3" class="form-control" name="pass" />
-                <label class="form-label" for="form6Example3">Passwword</label>
             </div>
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="text" id="form6Example4" class="form-control" name="address" />
-                <label class="form-label" for="form6Example4">Address</label>
+                <label class="form-label" for="form6Example4">Địa chỉ</label>
+                <input type="text" id="form6Example4" class="form-control" name="dc" />
             </div>
 
 
@@ -95,34 +95,31 @@
                         <span class="flaticon-bag"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Free Shipping</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services p-4 py-md-5">
-                    <div class="icon d-flex justify-content-center align-items-center mb-4">
-                        <span class="flaticon-customer-service"></span>
-                    </div>
-                    <div class="media-body">
-                        <h3 class="heading">Support Customer</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services p-4 py-md-5">
-                    <div class="icon d-flex justify-content-center align-items-center mb-4">
-                        <span class="flaticon-payment-security"></span>
-                    </div>
-                    <div class="media-body">
-                        <h3 class="heading">Secure Payments</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                    </div>
+							<h3 class="heading">Free Ship</h3>
+							<p>Đăng kí tài khoản và đặt hàng để hưởng ưu đãi free ship mọi nơi trên toàn quốc.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+					<div class="media block-6 services p-4 py-md-5">
+						<div class="icon d-flex justify-content-center align-items-center mb-4">
+							<span class="flaticon-customer-service"></span>
+						</div>
+						<div class="media-body">
+							<h3 class="heading">Hỗ trợ kịp thời</h3>
+							<p>Shop luôn sẵn sàng hỗ trợ kịp thời khi bạn có thắc mắc.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+					<div class="media block-6 services p-4 py-md-5">
+						<div class="icon d-flex justify-content-center align-items-center mb-4">
+							<span class="flaticon-payment-security"></span>
+						</div>
+						<div class="media-body">
+							<h3 class="heading">Thanh toán an toàn</h3>
+							<p>Thanh toán khi nhận hàng và quét mã QR.</p>
+						</div>
                 </div>
             </div>
         </div>
