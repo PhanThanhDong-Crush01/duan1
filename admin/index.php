@@ -99,6 +99,7 @@ if (isset($_GET['act'])) {
             if (isset($_GET['ma_sp']) && ($_GET['ma_sp'] > 0)) {
                 delete_sanpham($_GET['ma_sp']);
             }
+
             $listsanpham = loadall_sanpham("", 0);
             include "sanpham/list.php";
             break;
@@ -110,6 +111,7 @@ if (isset($_GET['act'])) {
             include "sanpham/update.php";
             break;
         case 'updatesp':
+            
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $id = $_POST['id'];
                 $iddm = $_POST['ma_loai'];

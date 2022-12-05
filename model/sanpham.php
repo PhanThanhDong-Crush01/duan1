@@ -5,8 +5,17 @@ function insert_sanpham($tensp,$giasp,$hinh,$mota,$iddm){
 }
 function delete_sanpham($id){
     $sql="delete from san_pham where ma_sp=".$id;
+    $sql1="delete from mau_size where idsp=".$id;
+    $sql2="delete from binh_luan where idpro=".$id;
     pdo_query($sql);
+    pdo_query($sql1);
+    pdo_query($sql2);
+
 }
+// function delete_mau_size_sl($idpro){
+//     $sql="delete from mau_size where idsp=".$idpro;
+//     pdo_query($sql);
+// }
 function loadall_sanpham_home(){
     $sql="select * from san_pham where 1 order by ma_sp desc limit 0,8";
     $listsanpham=pdo_query($sql);
@@ -60,6 +69,7 @@ function load_sanpham_cungloai($id,$ma_loai){
     return $listsanpham;
 }
 function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$filename){
+    
     if($filename!="")
         $sql="update san_pham set ma_loai='".$iddm."',ten_sp='".$tensp."',don_gia='".$giasp."',mo_ta='".$mota."',hinh='".$filename."' where ma_sp=".$id;
     else

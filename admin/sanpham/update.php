@@ -25,7 +25,7 @@ if (is_file($hinhpath)) {
                         <h4 class="card-title">Thêm Sản Phẩm</h4>
                     </div>
                     <div class="table-responsive">
-                        <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data" style="width: 50%; margin: 0 auto;">
+                        <form action="index.php?act=updatesp" method="POST" enctype="multipart/form-data" style="width: 50%; margin: 0 auto;">
                             <div class="form-group">
                                 <label class="col-md-12">Tên sản phẩm</label>
                                 <div class="col-md-12">
@@ -42,7 +42,7 @@ if (is_file($hinhpath)) {
                             <div class="form-group">
                                 <label class="col-md-12">Đơn giá</label>
                                 <div class="col-md-12">
-                                    <input type="number" class="form-control form-control-line" value="<?= $don_gia ?>" name="don_gia">
+                                    <input type="number" class="form-control form-control-line" value="<?= $don_gia ?>" name="giasp">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -57,22 +57,11 @@ if (is_file($hinhpath)) {
                                     <input type="date" class="form-control form-control-line" name="ngay_nhap">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Màu</label>
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-line" name="mau">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Size</label>
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-line" name="size">
-                                </div>
-                            </div>
+                            
                             <div class="form-group">
                                 <label class="col-md-12">Mô tả</label>
                                 <div class="col-md-12">
-                                    <textarea rows="5" class="form-control form-control-line" name="mo_ta"><?= $mo_ta ?></textarea>
+                                    <textarea rows="5" class="form-control form-control-line" name="mota"><?= $mo_ta ?></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
