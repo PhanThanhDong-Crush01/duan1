@@ -4,7 +4,7 @@
 				<div class="overlay"></div>
 				<div class="container-fluid p-0">
 					<div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-						<img class="one-third order-md-last img-fluid" src="/web2041/view/images/bg_1.png" alt="">
+						<img class="one-third order-md-last img-fluid" src="/duan1/view/images/bg_1.png" alt="">
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
 								<span class="subheading">#New Arrival</span>
@@ -25,7 +25,7 @@
 				<div class="overlay"></div>
 				<div class="container-fluid p-0">
 					<div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-						<img class="one-third order-md-last img-fluid" src="/web2041/view/images/bg_2.png" alt="">
+						<img class="one-third order-md-last img-fluid" src="/duan1/view/images/bg_2.png" alt="">
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
 								<span class="subheading">#New Arrival</span>
@@ -212,7 +212,7 @@
 					<div class="carousel-testimony owl-carousel">
 						<div class="item">
 							<div class="testimony-wrap">
-								<div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_1.jpg)">
+								<div class="user-img mb-4" style="background-image: url(/duan1/view/images/person_1.jpg)">
 									<span class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
@@ -227,7 +227,7 @@
 						</div>
 						<div class="item">
 							<div class="testimony-wrap">
-								<div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_2.jpg)">
+								<div class="user-img mb-4" style="background-image: url(/duan1/view/images/person_2.jpg)">
 									<span class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
@@ -242,7 +242,7 @@
 						</div>
 						<div class="item">
 							<div class="testimony-wrap">
-								<div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_3.jpg)">
+								<div class="user-img mb-4" style="background-image: url(/duan1/view/images/person_3.jpg)">
 									<span class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
@@ -257,7 +257,7 @@
 						</div>
 						<div class="item">
 							<div class="testimony-wrap">
-								<div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_1.jpg)">
+								<div class="user-img mb-4" style="background-image: url(/duan1/view/images/person_1.jpg)">
 									<span class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
@@ -272,7 +272,7 @@
 						</div>
 						<div class="item">
 							<div class="testimony-wrap">
-								<div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_1.jpg)">
+								<div class="user-img mb-4" style="background-image: url(/duan1/view/images/person_1.jpg)">
 									<span class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
@@ -304,42 +304,42 @@
 		<div class="container-fluid px-0">
 			<div class="row no-gutters">
 				<div class="col-md-4 col-lg-2 ftco-animate">
-					<a href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-1.jpg);">
+					<a href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-1.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-lg-2 ftco-animate">
-					<a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-2.jpg);">
+					<a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-2.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-lg-2 ftco-animate">
-					<a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-3.jpg);">
+					<a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-3.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-lg-2 ftco-animate">
-					<a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-4.jpg);">
+					<a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-4.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-lg-2 ftco-animate">
-					<a href="images/gallery-5.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-5.jpg);">
+					<a href="images/gallery-5.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-5.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-lg-2 ftco-animate">
-					<a href="images/gallery-6.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-6.jpg);">
+					<a href="images/gallery-6.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-6.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
 						</div>

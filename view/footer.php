@@ -89,20 +89,34 @@
     </svg></div>
 
 
-<script src="/web2041/view/js/jquery.min.js"></script>
-<script src="/web2041/view/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="/web2041/view/js/popper.min.js"></script>
-<script src="/web2041/view/js/bootstrap.min.js"></script>
-<script src="/web2041/view/js/jquery.easing.1.3.js"></script>
-<script src="/web2041/view/js/jquery.waypoints.min.js"></script>
-<script src="/web2041/view/js/jquery.stellar.min.js"></script>
-<script src="/web2041/view/js/owl.carousel.min.js"></script>
-<script src="/web2041/view/js/jquery.magnific-popup.min.js"></script>
-<script src="/web2041/view/js/aos.js"></script>
-<script src="/web2041/view/js/jquery.animateNumber.min.js"></script>
-<script src="/web2041/view/js/bootstrap-datepicker.js"></script>
-<script src="/web2041/view/js/scrollax.min.js"></script>
-<script src="/web2041/view/js/main.js"></script>
+<script src="/duan1
+/view/js/jquery.min.js"></script>
+<script src="/duan1
+/view/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/duan1
+/view/js/popper.min.js"></script>
+<script src="/duan1
+/view/js/bootstrap.min.js"></script>
+<script src="/duan1
+/view/js/jquery.easing.1.3.js"></script>
+<script src="/duan1
+/view/js/jquery.waypoints.min.js"></script>
+<script src="/duan1
+/view/js/jquery.stellar.min.js"></script>
+<script src="/duan1
+/view/js/owl.carousel.min.js"></script>
+<script src="/duan1
+/view/js/jquery.magnific-popup.min.js"></script>
+<script src="/duan1
+/view/js/aos.js"></script>
+<script src="/duan1
+/view/js/jquery.animateNumber.min.js"></script>
+<script src="/duan1
+/view/js/bootstrap-datepicker.js"></script>
+<script src="/duan1
+/view/js/scrollax.min.js"></script>
+<script src="/duan1
+/view/js/main.js"></script>
 
 <!-- <script>
     let slideIndex = 1;
