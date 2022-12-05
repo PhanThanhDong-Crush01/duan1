@@ -156,6 +156,8 @@ if (isset($_GET['act'])) {
                 delete_binhluan($_GET['ma_bl']);
             }
             $listbinhluan = loadall_binhluan("", 0);
+            $listsp = loadall_sanpham("", 0);
+
             include "binhluan/list.php";
             break;
         case 'thongke':

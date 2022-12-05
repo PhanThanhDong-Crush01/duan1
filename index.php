@@ -47,6 +47,7 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
             }
             break;
         case 'dangky':
+            
             if (isset($_POST['dangky']) && ($_POST['dangky'] > 0)) {
                 $email = $_POST['email'];
                 $ho_ten = $_POST['user'];
@@ -58,7 +59,7 @@ if ((isset($_GET['act'])) && ($_GET['act']) != "") {
                     $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng!";
                 }
             }
-            include "view/taikhoan/dangky.php";
+            include "view/taikhoan/dang_ky_view.php";
             break;
         case 'dangnhap':
             if (isset($_POST['dangnhap'])) {

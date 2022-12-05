@@ -16,7 +16,7 @@
         <h1>Sigup</h1>
     </div>
     <div class="container">
-        <form>
+        <form action="index.php?act=dangky" method="post" >
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="row mb-4">
                 <div class="col">

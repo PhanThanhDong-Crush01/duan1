@@ -1,3 +1,8 @@
+<?php
+if (is_array($sanpham)) {
+    extract($sanpham);
+}
+?>
 <div class="page-wrapper">
     <div class="page-breadcrumb">
         <div class="row">
@@ -46,15 +51,16 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Màu</label>
+                                <label class="col-md-12">Màu size</label>
                                 <div class="col-md-12">
+                                    <input type="text" hidden name="idpr" value="">
                                     <input type="text" class="form-control form-control-line" name="mau">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Size</label>
+                                <label class="col-md-12">Số lượng</label>
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-line" name="size">
+                                    <input type="number" class="form-control form-control-line" name="size">
                                 </div>
                             </div>
                             <div class="form-group">
