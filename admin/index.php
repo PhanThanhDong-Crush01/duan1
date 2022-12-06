@@ -153,6 +153,27 @@ if (isset($_GET['act'])) {
             $listsanpham = loadall_sanpham("", 0);
             include "sanpham/list.php";
             break;
+        case 'addadmin':
+            include "taikhoan/addadmin.php";
+            break;
+        case 'addadmin_fun':
+            $email = $_POST['email'];
+                $ho_ten = $_POST['user'];
+                $mat_khau = $_POST['pass'];
+                $dia_chi = $_POST['dc'];
+                $sdt = $_POST['sdt'];
+                $filename = $_FILES['hinh']['name'];
+                if ($_FILES["hinh"]["name"] != null) {
+                    move_uploaded_file($_FILES["hinh"]["tmp_name"], "upload/" . $_FILES['hinh']['name']);
+                }
+                $vaitro = 1;
+                insert_khachhang($vaitro,$email, $ho_ten, $mat_khau, $dia_chi, $sdt, $filename);
+            
+
+            $listtaikhoanadmin = loadall_taikhoan(1);
+            $list_kh = loadall_taikhoan($vaitro = 0);
+            include "taikhoan/list.php";
+            break;
         case 'dskh':
             $listtaikhoanadmin = loadall_taikhoan(1);
             $list_kh = loadall_taikhoan($vaitro = 0);

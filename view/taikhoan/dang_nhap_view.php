@@ -23,14 +23,14 @@
                 <form action="index.php?act=dangnhap" method="post">
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                        <input type="text" id="form1Example13" class="form-control form-control-lg" name="user" />
                         <label class="form-label" for="form1Example13">Tên</label>
+                        <input type="text" id="form1Example13" class="form-control form-control-lg" name="user" />
                     </div>
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                        <input type="password" id="form1Example23" class="form-control form-control-lg" name="pass" />
                         <label class="form-label" for="form1Example23">Mật khẩu</label>
+                        <input type="password" id="form1Example23" class="form-control form-control-lg" name="pass" />
                     </div>
 
                     <div class="d-flex justify-content-around align-items-center mb-4">

@@ -58,23 +58,8 @@
                         <i class="ti-menu ti-close"></i>
                     </a>
                     <div class="navbar-brand">
-                        <a href="../index.php" class="logo">
-                            <!-- Logo icon -->
-                            <b class="logo-icon">
-                                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                                <!-- Dark Logo icon -->
-                                <img src="./assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo icon -->
-                                <img src="./assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
-                            </b>
-                            <!--End Logo icon -->
-                            <!-- Logo text -->
-                            <span class="logo-text">
-                                <!-- dark Logo text -->
-                                <img src="./assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo text -->
-                                <img src="./assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
-                            </span>
+                        <a href="../index.php" class="logo" class="dark-logo">
+                            <h2 style="color: white; font-size: 150%;">Chicor Admin</h2>
                         </a>
                     </div>
 
@@ -136,6 +121,12 @@
                                 <i class="mdi mdi-av-timer"></i>
                                 <span class="hide-menu">Khách Hàng</span>
                             </a>
+                            <p class="sidebar-children">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=addadmin" aria-expanded="false">
+                                    <i></i>
+                                    <span class="hide-menu">Thêm tài khoản admin</span>
+                                </a>
+                            </p>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=lienhe" aria-expanded="false">
