@@ -38,13 +38,13 @@ function viewcart($del)
                     <h3>' . $cart[1] . '</h3>
                 </td>
 
-                <td class="price" style="color: red">' . $cart[3] . '.000 VNĐ</td>
+                <td class="price" style="color: red">' . $cart[3] . ' VNĐ</td>
 
                 <td class="quantity">' . $cart[4] . '</td>
 
                 <td class="quantity">' . $cart[5] . '</td>
 
-                <td class="quantity" style="color: red">' . $ttien . '.000 VNĐ</td>
+                <td class="quantity" style="color: red">' . $ttien . ' VNĐ</td>
 
                 <td class="quantity">' . $xoasp_td . '</td>
             </tr>
@@ -53,7 +53,7 @@ function viewcart($del)
     }
     echo '<tr>
             <td colspan="4">Tổng đơn hàng</td>
-            <td><input type="text" name="tong" value="' . $tong . '.000 VNĐ" readonly style="border: 1px solid white;" style="color: red"></td>
+            <td><input type="text" name="tong" value="' . $tong . ' VNĐ" readonly style="border: 1px solid white;" style="color: red"></td>
         </tr>
     </tbody>';
 }
@@ -113,9 +113,10 @@ function insert_hoa_don_chi_tiet($ma_hd, $idpro, $soluong, $mau_size, $thanhtien
     $sql = "INSERT INTO `hoa_don_chi_tiet` (`ma_hdct`, `ma_hd`, `ma_sp`, `so_luong`, `mau_size`, `tien`) VALUES (NULL, '$ma_hd', '$idpro', '$soluong', '$mau_size', '$thanhtien');";
     return pdo_execute($sql);
 }
-function insert_hoa_don($ma_kh, $ma_vc, $ngaydathang, $address, $tel, $tongdonhang, $pttt)
+function insert_hoa_don($ma_kh, $ma_vc, $ngaydathang, $address, $tel,$tong_giam, $tongdonhang, $pttt)
 {
-    $sql = "INSERT INTO `hoa_don` (`ma_kh`, `ma_vc`, `ngay_dat`, `dia_chi`,`sdt`, `tong_tien`, `pttt`) VALUES ('$ma_kh', '$ma_vc', '$ngaydathang', '$address', '$tel', '$tongdonhang', '$pttt');";
+    $sql = "INSERT INTO `hoa_don` (`ma_hd`,`ma_kh`, `ma_vc`, `ngay_dat`, `dia_chi`,`sdt`,`tong_giam`, `tong_tien`, `pttt` ,`trang_thai`, `tinh_trang_don_hang`) VALUES 
+    (NULL,'$ma_kh', '$ma_vc', '$ngaydathang', '$address', '$tel','$tong_giam', '$tongdonhang', '$pttt','đang xác nhận','chưa nhận hàng');";
     return pdo_execute($sql);
 }
 function loadone_bill($ma_hd)
@@ -139,7 +140,7 @@ function loadall_cart_count($ma_hd)
 function loadall_bill($ma_kh)
 {
     if ($ma_kh != null) {
-        $sql = "select * from hoa_don where ma_kh =" . $ma_kh;
+        $sql = "select * from hoa_don where ma_kh  =  $ma_kh order by ma_hd desc ";
     } else {
         $sql = "select * from hoa_don where 1 order by ma_hd desc";
     }

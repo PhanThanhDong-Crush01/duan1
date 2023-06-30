@@ -40,7 +40,7 @@ function loadall_sanpham($kyw,$iddm){
     if($iddm>0){
         $sql.=" and ma_loai = '".$iddm."'";
     }
-    $sql.=" order by ma_loai desc";
+    $sql.=" order by ma_sp desc";
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
@@ -64,10 +64,10 @@ function load_sanpham_cungloai($id,$ma_loai){
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
-function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$filename){
+function update_sanpham($id,$iddm,$tensp,$giasp,$ngaynhap,$mota,$filename){
     if($filename!="")
-        $sql="update san_pham set ma_loai='".$iddm."',ten_sp='".$tensp."',don_gia='".$giasp."',mo_ta='".$mota."',hinh='".$filename."' where ma_sp=".$id;
+        $sql="update san_pham set ma_loai='".$iddm."',ten_sp='".$tensp."',don_gia='".$giasp."',ngay_nhap='".$ngaynhap."',mo_ta='".$mota."',hinh='".$filename."' where ma_sp=".$id;
     else
-        $sql="update san_pham set ma_loai='".$iddm."',ten_sp='".$tensp."',don_gia='".$giasp."',mo_ta='".$mota."' where ma_sp=".$id;
+        $sql="update san_pham set ma_loai='".$iddm."',ten_sp='".$tensp."',don_gia='".$giasp."',ngay_nhap='".$ngaynhap."',mo_ta='".$mota."' where ma_sp=".$id;
     pdo_execute($sql);
 }

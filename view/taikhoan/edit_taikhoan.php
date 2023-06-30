@@ -1,4 +1,4 @@
-    <div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url('/duan1/view/images/bg_6.jpg');">
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
@@ -21,7 +21,7 @@
                     <div class="col-lg-4 col-xlg-3">
                         <div class="card">
                             <div class="card-body">
-                                <center class="mt-4"> <img src="/web2041-3/upload/<?= $hinh?>" class="rounded-circle" width="100" />
+                                <center class="mt-4"> <img src="/duan1-3/upload/<?= $hinh?>" class="rounded-circle" width="100" />
                                     <h4 class="card-title mt-2"><?= $ho_ten ?></h4>
                                     <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
                                     <div class="row text-center justify-content-md-center">
@@ -57,36 +57,42 @@
                                         <label class="col-md-12">Họ tên</label>
                                         <div class="col-md-12">
                                             <input type="text" class="form-control form-control-line" name="user" value="<?= $ho_ten ?>">
+                                            <span style="color:red;"><?php echo isset($erron_ten)? $erron_ten: "";?></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="example-email" class="col-md-12">Ảnh</label>
                                         <div class="col-md-12">
                                             <input type="file" class="form-control form-control-line" name="hinh">
+                                            <span style="color:red;"><?php echo isset($erron_anh)? $erron_anh: "";?></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="example-email" class="col-md-12">Email</label>
                                         <div class="col-md-12">
                                             <input type="email" class="form-control form-control-line" name="email" value="<?= $email ?>" id="example-email">
+                                            <span style="color:red;"><?php echo isset($erron_eml)? $erron_eml: "";?></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Mật khẩu</label>
                                         <div class="col-md-12">
                                             <input type="password" value="password" class="form-control form-control-line" name="pass" value="<?= $mat_khau ?>">
+                                            <span style="color:red;"><?php echo isset($erron_pass)? $erron_pass: "";?></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Điện thoại</label>
                                         <div class="col-md-12">
                                             <input type="text" class="form-control form-control-line" name="sdt" value="<?= $sdt ?>">
+                                            <span style="color:red;"><?php echo isset($erron_sdt)? $erron_sdt: "";?></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Địa chỉ</label>
                                         <div class="col-md-12">
                                             <input type="text" class="form-control form-control-line" name="dc" value="<?= $dia_chi ?>">
+                                            <span style="color:red;"><?php echo isset($erron_dc)? $erron_dc: "";?></span>
                                         </div>
                                     </div>
                                     <div class="form-group">

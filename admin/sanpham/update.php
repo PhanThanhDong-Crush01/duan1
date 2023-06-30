@@ -17,7 +17,7 @@ if (is_file($hinhpath)) {
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid">   
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -60,12 +60,6 @@ if (is_file($hinhpath)) {
                                 <label class="col-md-12">Mô tả</label>
                                 <div class="col-md-12">
                                     <textarea rows="5" class="form-control form-control-line" name="mota"><?= $mo_ta ?></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Đặc biệt</label>
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-line" name="dac_biet">
                                 </div>
                             </div>
                             <div class="form-group">

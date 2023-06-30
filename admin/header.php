@@ -14,6 +14,7 @@
     <!-- <link href="./assets/libs/chartist/dist/chartist.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
     <!-- <link href="./dist/css/style.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <style>
     .sidebar-item {
@@ -58,23 +59,8 @@
                         <i class="ti-menu ti-close"></i>
                     </a>
                     <div class="navbar-brand">
-                        <a href="../index.php" class="logo">
-                            <!-- Logo icon -->
-                            <b class="logo-icon">
-                                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                                <!-- Dark Logo icon -->
-                                <img src="./assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo icon -->
-                                <img src="./assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
-                            </b>
-                            <!--End Logo icon -->
-                            <!-- Logo text -->
-                            <span class="logo-text">
-                                <!-- dark Logo text -->
-                                <img src="./assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo text -->
-                                <img src="./assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
-                            </span>
+                        <a href="../index.php" class="logo" class="dark-logo">
+                            <h2 style="color: white; font-size: 150%;">Chicor Admin</h2>
                         </a>
                     </div>
 
@@ -134,8 +120,14 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=dskh" aria-expanded="false">
                                 <i class="mdi mdi-av-timer"></i>
-                                <span class="hide-menu">Khách Hàng</span>
+                                <span class="hide-menu">Tài khoản</span>
                             </a>
+                            <p class="sidebar-children">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=addadmin" aria-expanded="false">
+                                    <i></i>
+                                    <span class="hide-menu">Thêm tài khoản admin</span>
+                                </a>
+                            </p>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=lienhe" aria-expanded="false">
@@ -144,16 +136,21 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=voucher" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=listvc" aria-expanded="false">
                                 <i class="mdi mdi-av-timer"></i>
                                 <span class="hide-menu">Voucher</span>
                             </a>
+                         
                             <p class="sidebar-children">
                                 <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=addvc" aria-expanded="false">
                                     <i></i>
                                     <span class="hide-menu">Thêm Voucher</span>
                                 </a>
                             </p>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=lvc" aria-expanded="false">
+                                <i class="mdi mdi-av-timer"></i>
+                                <span class="hide-menu">Loại Voucher</span>
+                            </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=listbill" aria-expanded="false">
@@ -166,7 +163,7 @@
                                 <i class="mdi mdi-av-timer"></i>
                                 <span class="hide-menu">Thống Kê</span>
                             </a>
-                            <p class="sidebar-children">
+                            <!-- <p class="sidebar-children">
                                 <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=bieudo" aria-expanded="false">
                                     <i></i>
                                     <span class="hide-menu">Sản Phẩm</span>
@@ -175,7 +172,7 @@
                                     <i></i>
                                     <span class="hide-menu">Doanh Thu</span>
                                 </a>
-                            </p>
+                            </p> -->
                         </li>
                     </ul>
                 </nav>

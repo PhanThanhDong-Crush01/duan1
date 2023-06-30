@@ -1,10 +1,8 @@
-<div class="hero-wrap hero-bread" style="background-image: url('/duan1/view/images/bg_6.jpg');">
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate text-center">
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Trang chủ</a></span> <span>Hóa đơn</span></p>
-                    <h1 class="mb-0 bread">Lịch sử mua hàng</h1>
-                </div>
+<div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <h4 class="page-title">Chi Tiết Hóa Đơn</h4>
             </div>
         </div>
     </div>
@@ -33,16 +31,16 @@
                         $sql1 = "select * from san_pham where ma_sp = " . $value['ma_sp'];
                         $sanpham = pdo_query_one($sql1);
 
-                        $hinh = $img_path . $sanpham['hinh'];
+                        $hinh = "../upload/" . $sanpham['hinh'];
 
                         echo '<tr class="text-center">
                                 <td class="product-remove"></td>
 
                                 <td class="image-prod">
-                                    <img src="' . $hinh . '" alt="hinh" class="img">
+                                    <img width=150px src="' . $hinh . '" alt="hinh" class="img">
                                 </td>
 
-                                <td class="product-name">
+                                <td class="product-name" width=35%>
                                     <h3>' . $sanpham['ten_sp'] . '</h3>
                                 </td>
 

@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('/duan1/view/images/bg_6.jpg');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -17,20 +17,22 @@
     <div class="container py-5 h-100">
         <div class="row d-flex align-items-center justify-content-center h-100">
             <div class="col-md-8 col-lg-7 col-xl-6">
-                <img src="/web2041/view/images/svg_dang_nhap.jpg" class="img-fluid" alt="Phone image">
+                <img src="/duan1/view/images/svg_dang_nhap.jpg" class="img-fluid" alt="Phone image">
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                 <form action="index.php?act=dangnhap" method="post">
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                        <input type="text" id="form1Example13" class="form-control form-control-lg" name="user" />
-                        <label class="form-label" for="form1Example13">Tên</label>
+                        <label class="form-label" for="form1Example13">Email</label>
+                        <input type="email" id="form1Example13" class="form-control form-control-lg" name="email" />
+                        <span style="color:red;"><?php echo isset($erron_email)? $erron_email: "";?></span>
                     </div>
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                        <input type="password" id="form1Example23" class="form-control form-control-lg" name="pass" />
                         <label class="form-label" for="form1Example23">Mật khẩu</label>
+                        <input type="password" id="form1Example23" class="form-control form-control-lg" name="pass" />
+                        <span style="color:red;"><?php echo isset($erron_pass)? $erron_pass: "";?></span>
                     </div>
 
                     <div class="d-flex justify-content-around align-items-center mb-4">

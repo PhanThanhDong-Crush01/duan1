@@ -23,10 +23,11 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">KHÁCH HÀNG</th>
-                                <th scope="col">SỐ LƯỢNG HÀNG</th>
-                                <th scope="col">GIÁ TRỊ ĐƠN HÀNG</th>
+                                <th scope="col">SỐ LƯỢNG</th>
+                                <th scope="col">TỔNG TIỀN</th>
                                 <th scope="col">NGÀY ĐẶT HÀNG</th>
                                 <th scope="col">TRẠNG THÁI</th>
+                                <th scope="col">TÌNH TRẠNG</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -39,21 +40,22 @@
                                 $kh = pdo_query($sql);
 
                                 $khach_hang = '<li>' . $kh[0]["ho_ten"] . '</li> <br> <li>' . $kh[0]["email"] . '</li> <br> <li>' . $bill["dia_chi"] . '</li> <br> <li>' . $bill["sdt"] . '</li>';
-                                $ttdh = get_ttdh($bill["trang_thai"]);
-                                $countsp = loadall_cart_count($bill["ma_hd"]);
-                                echo '<tr>
-                                    <th scope="row">' . $bill['ma_hd'] . '</th>
-                                    <td>' . $khach_hang . '</td>
-                                    <td>' . $countsp . '</td>
-                                    <td>' . $bill['tong_tien'] . '</td>
-                                    <td>' . $bill['ngay_dat'] . '</td>
-                                    <td>' . $ttdh . '</td>
-                                    <td><a href="" class="btn btn-success text-white">Cập nhật
-                                            trạng thái</a>
-                                    </td>
-                                </tr>';
-                            }
+                                $countsp = loadall_cart_count($bill["ma_hd"]); 
+                                $btn_xn = "<a href="."index.php?act=xacnhantrangthai&mahd=". $bill['ma_hd'] ." class='btn btn-success text-white'>Xác nhận trạng thái</a>"
                             ?>
+                                <tr>
+                                    <th scope="row"><?= $bill['ma_hd'] ?></th>
+                                    <td><?= $khach_hang ?></td>
+                                    <td><?= $countsp ?></td>
+                                    <td style="color: red;"><?= $bill['tong_tien'] ?> VNĐ</td>
+                                    <td><?= $bill['ngay_dat'] ?></td>
+                                    <td><?= $bill["trang_thai"] ?></td>
+                                    <td><?= $bill["tinh_trang_don_hang"] ?></td>
+                                    <td><?= ($bill["trang_thai"] != "Đã xác nhận") ? $btn_xn : "" ?> <br> <br>
+                                    <a   href="index.php?act=chitiethoadon&mahd=<?= $bill['ma_hd'] ?>"><button class='btn btn-success text-white' style="background-color: #00008b;">Chi tiết hóa đơn</button></a> 
+                                    </td>
+                                </tr>
+                           <?php } ?>
                         </tbody>
                     </table>
                 </div>

@@ -8,6 +8,7 @@
                     <div class="row mb10">
                         Email
                         <input type="email" name="email">
+                        <span style="color:red;"><?php echo isset($erron_ten)? $erron_ten: "";?></span>
                     </div>  
                     <div class="row mb10">
                         <input type="submit" value="Gửi" name="guiemail">

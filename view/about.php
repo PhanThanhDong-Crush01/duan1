@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('/duan1/view/images/bg_6.jpg');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -52,7 +52,7 @@
 <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/web2041/view/images/about.jpg);">
+            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/duan1/view/images/about.jpg);">
                 <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
                     <span class="icon-play"></span>
                 </a>
@@ -124,7 +124,7 @@
                 <div class="carousel-testimony owl-carousel ftco-animate">
                     <div class="item">
                         <div class="testimony-wrap">
-                            <div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_1.jpg)">
+                            <div class="user-img mb-4" style="background-image: url(/duan1/view/images/person_1.jpg)">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap">
-                            <div class="user-img mb-4" style="background-image: url(/web2041/view/images/person_2.jpg)">
+                            <div class="user-img mb-4" style="background-image: url(/duan1/view/images/person_2.jpg)">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -168,42 +168,42 @@
     <div class="container-fluid px-0">
         <div class="row no-gutters">
             <div class="col-md-4 col-lg-2 ftco-animate">
-                <a href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-1.jpg);">
+                <a href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-1.jpg);">
                     <div class="icon mb-4 d-flex align-items-center justify-content-center">
                         <span class="icon-instagram"></span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 col-lg-2 ftco-animate">
-                <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-2.jpg);">
+                <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-2.jpg);">
                     <div class="icon mb-4 d-flex align-items-center justify-content-center">
                         <span class="icon-instagram"></span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 col-lg-2 ftco-animate">
-                <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-3.jpg);">
+                <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-3.jpg);">
                     <div class="icon mb-4 d-flex align-items-center justify-content-center">
                         <span class="icon-instagram"></span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 col-lg-2 ftco-animate">
-                <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-4.jpg);">
+                <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-4.jpg);">
                     <div class="icon mb-4 d-flex align-items-center justify-content-center">
                         <span class="icon-instagram"></span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 col-lg-2 ftco-animate">
-                <a href="images/gallery-5.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-5.jpg);">
+                <a href="images/gallery-5.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-5.jpg);">
                     <div class="icon mb-4 d-flex align-items-center justify-content-center">
                         <span class="icon-instagram"></span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 col-lg-2 ftco-animate">
-                <a href="images/gallery-6.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/web2041/view/images/gallery-6.jpg);">
+                <a href="images/gallery-6.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/duan1/view/images/gallery-6.jpg);">
                     <div class="icon mb-4 d-flex align-items-center justify-content-center">
                         <span class="icon-instagram"></span>
                     </div>

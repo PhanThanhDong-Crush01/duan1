@@ -2,93 +2,73 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-5 align-self-center">
-                <h4 class="page-title">Danh Sách Loại Voucher</h4>
+                <h4 class="page-title">Danh Sách Voucher</h4>
             </div>
         </div>
     </div>
     <div class="container-fluid">
+        <form action="index.php?act=listvc" method="post">
+            <input type="text" name="kyw">
+            <select name="ma_lvc">
+                <option value="0" selected>Tất cả</option>
+                <?php
+                foreach ($listloaivc as $voucher) {
+                    extract($voucher);
+                    echo '<option value="' . $ma_lvc . '">' . $ten_lvc . '</option>';
+                }
+                ?>
+            </select>
+            <input type="submit" name="listok" value="Go">
+        </form>
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Thêm Loại Voucher</h4>
-                    </div>
-                    <div class="table-responsive">
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label class="col-md-12"> Tên Loại</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Nhập tên loại sản phẩm" class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <button class="btn btn-success text-white">Add</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Loại Voucher</h4>
+                        <h4 class="card-title">Danh sách</h4>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Tên Loại</th>
+                                    <th scope="col">Tên voucher</th>
+                                    <th scope="col">Mức giảm giá </th>
+                                    <th scope="col">Hạn sử dụng </th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Tên Loại</td>
-                                    <td><a href="" class="btn btn-success text-white">Danh sách</a>
-                                        <!-- bấm danh sách sẽ hiện danh sách voucher theo loại voucher ở dưới = lọc -->
-                                        <a href="" class="btn btn-success text-white">Sửa</a>
-                                        <a href="" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
+                                <?php
+                                foreach ($listvc as $vc) {
+                                    extract($vc);
+                                    
+                                                       
+                                    $suavc = "index.php?act=suavc&ma_vc=" . $ma_vc;
+                                    $xoavc = "index.php?act=xoavc&ma_vc=" . $ma_vc;
+                                  
+                                   
+                                    echo '<tr>
+                                    <th scope="row">' . $ma_vc . '</th>
+                                    <td>' . $ten_vc . '</td>
+                                  
+                                    <td  style="color: red;">' . $muc_giam_gia . '%</td>
+                                    <td width="10%">' . $hsd . '</td>
+                                   
+                                    
+                                    
+                                    
+                                    <td width="12%"><a href="' . $suavc . '" class="btn btn-success text-white">Sửa</a>
+                                        <a href="' . $xoavc . '" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
                                     </td>
-                                </tr>
+                                </tr>';
+                                                              
+                            }
+                                ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Danh sách voucher</h4>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Tên Voucher</th>
-                                    <th scope="col">Mức Giảm Giá</th>
-                                    <th scope="col">Hạn Sử Dụng</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><a href="" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <a href="./addvoucher.html" class="btn btn-success text-white">Thêm voucher</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>

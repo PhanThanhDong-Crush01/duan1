@@ -35,7 +35,7 @@
                                     <th scope="col">Hình</th>
                                     <th scope="col">Đơn giá</th>
                                     <th scope="col">Ngày nhập</th>
-                                    <th scope="col">Đặc biệt</th>
+                                    <th scope="col">Số lượng</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -51,13 +51,14 @@
                                     } else {
                                         $hinh = "no photo".$hinhpath;
                                     }
+                                    $soluong =  so_luong_sp($ma_sp);
                                     echo '<tr>
                                     <th scope="row">' . $ma_sp . '</th>
                                     <td>' . $ten_sp . '</td>
                                     <td>' . $hinh . '</td>
-                                    <td  style="color: red;">' . $don_gia . '.000</td>
+                                    <td  style="color: red;">' . $don_gia . ' VNĐ</td>
                                     <td width="10%">' . $ngay_nhap . '</td>
-                                    <td class="mo_ta" width="10%">' . $dac_biet = null ? "rất đặc biệt" : "không" . '</td>
+                                    <td class="mo_ta" width="10%">'. $soluong[0]["so_luong_tong"] . '</td>
                                     <td width="12%"><a href="' . $suasp . '" class="btn btn-success text-white">Sửa</a>
                                         <a href="' . $xoasp . '" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
                                     </td>

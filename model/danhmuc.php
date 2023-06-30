@@ -6,6 +6,8 @@ function insert_danhmuc($tenloai){
 function delete_danhmuc($id){
     $sql="delete from loai where ma_loai=".$id;
     pdo_query($sql);
+    $sql1 = "UPDATE `san_pham` SET `san_pham`.`ma_loai`= 100 WHERE `san_pham`.`ma_loai` = $id;";
+    pdo_query($sql1);
 }
 function loadall_danhmuc(){
     $sql="select * from loai order by ma_loai desc";

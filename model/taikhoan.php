@@ -5,9 +5,9 @@ function insert_khachhang($vaitro,$email, $ho_ten, $mat_khau, $dia_chi, $sdt, $f
     VALUES (NULL,'$vaitro', '1', '$filename', '$email', '$ho_ten', '$mat_khau', '$dia_chi','$sdt');";
     pdo_execute($sql);
 }
-function checkuser($ho_ten, $mat_khau)
+function checkuser($email, $mat_khau)
 {
-    $sql = "select * from khach_hang where ho_ten='" . $ho_ten . "' AND mat_khau='" . $mat_khau . "'";
+    $sql = "select * from khach_hang where email='" . $email . "' AND mat_khau='" . $mat_khau . "'";
     $sp = pdo_query_one($sql);
     return $sp;
 }

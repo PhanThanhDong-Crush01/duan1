@@ -40,7 +40,7 @@
                                     if($countbl['tongbl']>0){
                                     echo '
                                     <tr>
-                                    <th scope="row">1</th>
+                                    <th scope="row"></th>
                                     <td>'.$tensp["ten_sp"].'</td>
                                     <td>'.$countbl['tongbl'].'</td>
                                     <td>'.$oldbl['maxbl'].'</td>

@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('/duan1/view/images/bg_6.jpg');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -23,18 +23,10 @@
                 <h3><?= $ten_sp ?></h3>
                 <div class="rating d-flex">
                     <p class="text-left mr-4">
-                        <a href="#" class="mr-2">5.0</a>
-                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                    </p>
-                    <p class="text-left mr-4">
                         <a href="#" class="mr-2" style="color: #000;">Số lượng: <span style="color: blue;"><?php echo $soluong[0]["so_luong_tong"];?></span></a>
                     </p>
                 </div>
-                <p class="price"><span style="color: red;"><?= $don_gia ?>.000 VNĐ</span></p>
+                <p class="price"><span style="color: red;"><?= $don_gia ?> VNĐ</span></p>
                 <p><?= $mo_ta ?></p>
                 </p>
                 <form action="index.php?act=addtocart&ma_sp=<?= $ma_sp ?>" method="post">
@@ -86,10 +78,7 @@
             <div class="col-md-12 nav-link-wrap">
                 <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Bình Luận</a>
-
                     <a class="nav-link ftco-animate active mr-lg-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Mô Tả</a>
-
-                    <a class="nav-link ftco-animate mr-lg-1" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Sản Xuất</a>
                 </div>
             </div>
             <div class="col-md-12 tab-wrap">
@@ -132,11 +121,6 @@
                                         </h4>
                                         <p class="star">
                                             <span>
-                                                <i class="ion-ios-star-outline"></i>
-                                                <i class="ion-ios-star-outline"></i>
-                                                <i class="ion-ios-star-outline"></i>
-                                                <i class="ion-ios-star-outline"></i>
-                                                <i class="ion-ios-star-outline"></i>
                                             </span>
                                             <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
                                         </p>
@@ -145,20 +129,12 @@
                                 </div>';
                                 }
                                 ?>
-                                <form action="" method="post">
+                                <form action="index.php?act=guibinhluan&idpro=<?= $idpro ?>" method="post">
                                     <input type="hidden" name="idpro" value="<?= $idpro ?>">
                                     <input type="text" name="noi_dung">
                                     <input type="submit" name="guibinhluan" value="Gửi bình luận">
                                 </form>
-                                <?php
-                                if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
-                                    $noi_dung = $_POST['noi_dung'];
-                                    $idpro = $_POST['idpro'];
-                                    $iduser = $_SESSION['user']['ma_kh'];
-                                    $ngay_bl = date("Y/m/d");
-                                    insert_binhluan($noi_dung, $iduser, $idpro, $ngay_bl);
-                                }
-                                ?>
+                                <span style="color:red;"><?php echo isset($erron_bl)? $erron_bl: "";?></span>
                             </div>
 
                             <!-- đánh giá sao -->
@@ -172,9 +148,8 @@
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
-                                            (98%)
                                         </span>
-                                        <span>20 Reviews</span>
+                                        <span> Reviews</span>
                                     </p>
                                     <p class="star">
                                         <span>
@@ -183,9 +158,8 @@
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
-                                            (85%)
                                         </span>
-                                        <span>10 Reviews</span>
+                                        <span> Reviews</span>
                                     </p>
                                     <p class="star">
                                         <span>
@@ -194,9 +168,8 @@
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
-                                            (98%)
                                         </span>
-                                        <span>5 Reviews</span>
+                                        <span> Reviews</span>
                                     </p>
                                     <p class="star">
                                         <span>
@@ -205,9 +178,8 @@
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
-                                            (98%)
                                         </span>
-                                        <span>0 Reviews</span>
+                                        <span> Reviews</span>
                                     </p>
                                     <p class="star">
                                         <span>
@@ -216,9 +188,8 @@
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
                                             <i class="ion-ios-star-outline"></i>
-                                            (98%)
                                         </span>
-                                        <span>0 Reviews</span>
+                                        <span> Reviews</span>
                                     </p>
                                 </div>
                             </div>
@@ -231,11 +202,11 @@
 </section>
 
 <script>
-        // function so_luong_theo_mau_size(){
-        //     const mau_size = document.querySelector("#mau_size").value;
-        //     const so_luong = document.querySelector("#so_luong_sp");
-        //     so_luong.innerHTML = mau_size;
-        // }
+        function so_luong_theo_mau_size(){
+            const mau_size = document.querySelector("#mau_size").value;
+            const so_luong = document.querySelector("#so_luong_sp");
+            so_luong.innerHTML = mau_size;
+        }
         
 		const quantity = document.querySelector(".quantity");
 

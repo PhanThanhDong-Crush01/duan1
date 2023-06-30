@@ -26,15 +26,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td><a href="" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
-                                    </td>
-                                </tr>
+                            <?php
+                                foreach ($listlienhe as $lienhe) {
+                                    extract($lienhe);
+                                    
+                                    $xoalh = "index.php?act=xoalh&id=" . $id;
+                                    echo '<tr>
+                                                <th scope="row">' . $id . '</th>
+                                                <td>' . $yourname . '</td>
+                                                <td>' . $youremail . '</td>
+                                                <td>' . $title . '</td>
+                                                <td>' . $message . '</td>
+                                              <td>
+                                                    <a href="' . $xoalh . '" class="btn btn-success text-white" style="background-color: red;">Xóa</a>
+                                                </td>
+                                            </tr>';
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>

@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('/web2041/view/images/bg_6.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('/duan1/view/images/bg_6.jpg');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -23,16 +23,19 @@
                     <div class="form-outline">
                         <label class="form-label" for="form6Example1">Tên</label>
                         <input type="text" id="form6Example1" class="form-control" name="user" />
+                        <span style="color:red;"><?php echo isset($erron_ten)? $erron_ten: "";?></span>
                     </div>
                     <div class="form-outline">
                         <label class="form-label" for="form6Example2">Điện thoại</label>
-                        <input type="text" id="form6Example2" class="form-control" name="sdt" />
+                        <input type="number" id="form6Example2" class="form-control" name="sdt" />
+                        <span style="color:red;"><?php echo isset($erron_sdt)? $erron_sdt: "";?></span>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-outline">
                         <label class="form-label" for="form6Example2">Ảnh</label>
                         <input type="file" class="form-control" style="font-size: 15px;" id="cover" name="hinh" />
+                        <span style="color:red;"><?php echo isset($erron_anh)? $erron_anh: "";?></span>
                     </div>
                     <div class="form-outline" style="text-align: center;">
                         <img src="https://www.freeiconspng.com/uploads/no-image-icon-13.png" id="coverPreview" alt="" width="100px">
@@ -44,18 +47,21 @@
             <div class="form-outline mb-4">
                 <label class="form-label" for="form6Example5">Email</label>
                 <input type="email" id="form6Example5" class="form-control" require name="email" />
+                <span style="color:red;"><?php echo isset($erron_eml)? $erron_eml: "";?></span>
             </div>
 
             <!-- Text input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="form6Example3">Mật khẩu</label>
                 <input type="password" id="form6Example3" class="form-control" name="pass" />
+                <span style="color:red;"><?php echo isset($erron_pass)? $erron_pass: "";?></span>
             </div>
 
             <!-- Text input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="form6Example4">Địa chỉ</label>
                 <input type="text" id="form6Example4" class="form-control" name="dc" />
+                <span style="color:red;"><?php echo isset($erron_dc)? $erron_dc: "";?></span>
             </div>
 
 
@@ -66,7 +72,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4" style="height: 50px;">Sig Up</button>
+            <button type="submit" class="btn btn-primary btn-block mb-4" style="height: 50px;" name="dangky">Sig Up</button>
         </form>
     </div>
 </section>
